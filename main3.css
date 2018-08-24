@@ -12,13 +12,13 @@ body {
     background-color: black;
  }
   
-  /* .trainer_1{
+  .trainer_1{
       width: 500px; 
-  } */
+  } 
 
-  /* #trainer2{
+   #trainer2{
       height: 230px; 
-  } */
+  }
 
   .trainer_2{
     width: 500px; 
@@ -39,9 +39,9 @@ header{
     background-color: black
 }
 
-#section-2{
+/* #section-2{
     height: 2450px;
-}
+} */
 
 
 #section-4 {
