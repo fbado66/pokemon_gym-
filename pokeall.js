@@ -19,23 +19,32 @@ class Trainer {
         this.enemy = []; //enemy via search
     }
 
-    //gets the pokemon in the trainer 
-    add(pokemon) {
+
+    add(pokemon) { //adds pokemon to array
         this.pokemonArray.push(pokemon)
     }
-    addEnemy(uglyMonster) {
+    addEnemy(uglyMonster) { //adds enemy to array
         this.enemy.push(uglyMonster);
     }
-    addTR(trainer) {
+    addTR(trainer) { //adds pokemon and trainer to the gym
         this.trainer.push(trainer);
     }
-    //adds the pokemon to the pokemon array 
-    get(name) {//needs work
+    getIndividual(id) {
+        for (let i = 0; i < this.pokemonArray.length; i++) {
+            if (this.pokemonArray[i].id === id) {
+                console.log(this.pokemonArray[i])
+            
+            }else{console.log("Not trained yet!");}
+        }
+        
+
+    }
+    get(name) { //needs work
         return this.pokemonArray.find((element) => {
             return element.name == name;
         })
     }
-    gettrainerPokesData() {//needs work
+    gettrainerPokesData() { //needs work
         return (this.name,
             this.pokemonArray.forEach(element => {
                 console.log(element)
@@ -73,10 +82,10 @@ class Trainer {
          </div>
          </div>
          `
-         //r.pokemonArray[0].getMoves[0]
+
             div.appendChild(divCard);
         });
-        
+
     }
 }
 
@@ -100,11 +109,11 @@ class Pokemon {
     constructor(data, getItem, getMoves) {
         this.id = data.id;
         this.name = data.name,
-            this.type = data.types[0].type.name;
+        this.type = data.types[0].type.name;
         this.attack = data.stats[4].base_stat,
-            this.defense = data.stats[3].base_stat,
-            this.abilities = [`${data.abilities[0].ability.name}` + `\xa0\xa0\xa0\xa0` + `${data.abilities[1].ability.name}`],
-            this.hp = data.stats[5].base_stat
+        this.defense = data.stats[3].base_stat,
+        this.abilities = [`${data.abilities[0].ability.name}` + `\xa0\xa0\xa0\xa0` + `${data.abilities[1].ability.name}`],
+        this.hp = data.stats[5].base_stat
         this.speed = data.stats[0].base_stat;
         this.specialDefense = data.stats[1].base_stat;
         this.specialAttack = data.stats[2].base_stat
@@ -259,4 +268,22 @@ document.getElementById("myBtn").addEventListener("click", displayPokeList);
 function displayPokeList() {
     r.getAllPokemon();
     f.getAllPokemon();
+    //r.pokemonArray[0];
 }
+/////////////////////////////////////////////////////////////////////////////////
+document.getElementById("myBtn1").addEventListener("click", displayOnePokemon);
+function displayOnePokemon() {
+    let id = gettheNumber();
+    if(true){
+        r.getIndividual(id) || f.getIndividual(id)
+
+    }
+}
+
+function gettheNumber(){
+    let getHp= document.getElementById("inputNumber").value;
+    let num = parseInt(getHp);
+    return num;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
