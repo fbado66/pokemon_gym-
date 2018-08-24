@@ -15,7 +15,7 @@ class Trainer {
     constructor(name) {
         this.name = name;
         this.pokemonArray = [];
-        this.trainer = [];//our gym
+        this.trainer = []; //our gym
         this.enemy = []; //enemy via search
     }
 
@@ -23,33 +23,33 @@ class Trainer {
     add(pokemon) {
         this.pokemonArray.push(pokemon)
     }
-    addEnemy(uglyMonster){
+    addEnemy(uglyMonster) {
         this.enemy.push(uglyMonster);
     }
     addTR(trainer) {
         this.trainer.push(trainer);
     }
     //adds the pokemon to the pokemon array 
-    get(name) {
+    get(name) {//needs work
         return this.pokemonArray.find((element) => {
             return element.name == name;
         })
     }
-    gettrainerPokesData() {
+    gettrainerPokesData() {//needs work
         return (this.name,
             this.pokemonArray.forEach(element => {
                 console.log(element)
             }))
     }
-     //example of putting all the data on the screen////
-     getAllPokemon() {
-     let div = document.getElementById("myList1");
-     let divCard = document.createElement("div");
-     divCard.setAttribute("id", "attriblist");
-     this.pokemonArray.forEach(element => { //use element.whatever to get data
-         let divCard = document.createElement("div");
+    //example of putting all the data on the screen////
+    getAllPokemon() {
+        let div = document.getElementById("myList1");
+        let divCard = document.createElement("div");
+        divCard.setAttribute("id", "attriblist");
+        this.pokemonArray.forEach(element => { //use element.whatever to get data
+            let divCard = document.createElement("div");
 
-         divCard.innerHTML = `
+            divCard.innerHTML = `
          <h2 class="center teal">${this.name}</h2>
          <h3 class="header myListName">${element.name}</h3>
          <div class="card horizontal">
@@ -63,18 +63,20 @@ class Trainer {
                  <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
                  <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
                  <h3>Making Moves with Accuracy, Power and Priority</h3>
-                
+                 
+                 <p>${this.pokemonArray[0].getMoves[0]}</p>
+                 <p>${this.pokemonArray[0].getMoves[1]}</p>
+                 <p>${this.pokemonArray[0].getMoves[2]}</p>
+                 <p>${this.pokemonArray[0].getMoves[3]}</p>
          </div>
              
          </div>
          </div>
          `
-         div.appendChild(divCard);
+         //r.pokemonArray[0].getMoves[0]
+            div.appendChild(divCard);
         });
-        //  <p>${this.pokemonArray[0].moves[0]}</p>
-        //          <p>${this.pokemonArray[0].moves[1]}</p>
-        //          <p>${this.pokemonArray[0].moves[2]}</p>
-        //          <p>${this.pokemonArray[0].moves[3]}</p>
+        
     }
 }
 
@@ -136,7 +138,7 @@ axios.all(getUrl)
         for (let i = 0, k = 1; i < result.length; i++) {
             console.log(result[i].data)
 
-            monster = new Pokemon(result[i].data, getItem(),getMoves());
+            monster = new Pokemon(result[i].data, getItem(), getMoves());
 
 
 
@@ -162,8 +164,8 @@ axios.all(getUrl)
                         .then(function (resBonus) {
                             let bong = resBonus.data;
                             //console.log(bong);
-                            // console.log(
-                            //     `Moves${i}: ${makingMoves[randMoves].move.name}
+                            //console.log(
+                            // `Moves${i}: ${makingMoves[randMoves].move.name}
                             //  Accruacy: ${bong.accuracy}
                             //  Power: ${bong.power}
                             //  Priority: ${bong.priority}`);
@@ -182,10 +184,10 @@ axios.all(getUrl)
             }
 
             gym.add(monster);
-            
+
 
         }
-        
+
 
     }).catch((error) => {
         console.log(error)
@@ -199,8 +201,8 @@ function getThePokemans(response) {
     axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
         .then(function (result) {
             console.log(result.data);
-            monster = new Pokemon(result.data, getItem(),getMoves());
-            
+            monster = new Pokemon(result.data, getItem(), getMoves());
+
 
             function getItem() {
                 let stuff = result.data.held_items[0];
@@ -242,9 +244,9 @@ function getThePokemans(response) {
 
             }
 
-           
-        e.addEnemy(monster);
-        
+
+            e.addEnemy(monster);
+
 
         }).catch(function (response) {
             console.error(response);
