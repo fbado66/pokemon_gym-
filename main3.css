@@ -16,6 +16,9 @@ body {
       width: 500px; 
   }
 
+  #trainer2{
+      height: 230px; 
+  }
 
   .trainer_2{
     width: 500px; 
@@ -30,6 +33,16 @@ body {
     overflow: hidden;
     display: inline-block;
     color: white; 
+}
+
+header{
+    background-color: black
+}
+
+#section-4 {
+    height: 850px;
+    /* padding: 2px; */
+    text-align: center;
 }
 
 section {
@@ -85,7 +98,7 @@ header a:hover{
     width: 100%;
     /* margin-top: -2px; */
     z-index: -999;
-    float: center; 
+    float: center !important
     
 }
 
@@ -100,7 +113,7 @@ header a:hover{
     top: 0;
     left: 0;
     background-color: #1F2D3D;
-    opacity: .7;
+    /* opacity: .7; */
     height: 670px;
     
 } 
@@ -233,6 +246,10 @@ footer {
     
 }
 
+
+#trainer3{
+    width: 110px;
+}
 /* #second-image{
     z-index: -99 !important;
 } */
