@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokédex</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="pokemonFont">
+    <link rel="stylesheet" href="poke.css">
+</head>
+
+<body>
+    <div class="mainContainer"></div>
+    <!-- banner - nav bar -->
+    <div class="row">
+        <div class="row">
+            <div class="col s12 blue-grey lighten-4">
+                <h1 class="text-align: center ptext">Welcome to my Pokédex</h1>
+
+                <div class="col s4">
+                    <img class="imageHball" alt="Pokéball" src="imagestuff/UltraBallArt.png">
+                </div>
+                <div class="col s4">
+                    <img class="imageLogo" alt="Pokémon logo" src="imagestuff/International_Pokémon_logo.svg.png">
+                </div>
+                <div class="col m4 right-align">
+                    <img class="imageHball " alt="Pokéball" src="imagestuff/Great_Ball.png">
+                </div>
+            </div>
+        </div>
+        <!-- nav bar -->
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper teal">
+                    <ul>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#container">Pokédex</a>
+                        </li>
+                        <li>
+
+                            <a id="myBtn" href="#myList1">Pokémon Trainer</a>
+
+                        </li>
+                        <li>
+                            <a href="#newTrainerAddPokemon">Pokémon Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- my image, pedigree info for me, godzilla image -->
+        <div class="row">
+            <div class="col s2 myheader">
+                <img class="myImageSize z-depth-5" src="imagestuff/student_name_profile.jpg">
+            </div>
+            <div class="col s5 myheader">
+                <p class="pHeader">I just started my collection of Pokémon, I am a novice trainer. On the left I am in human form, on the right
+                    is when I morph into my own Pokémon. Here is a list of my stats when I am Pokémon trainer.</p>
+                <strong class="font-size: 18px ">
+                    Height: 800' Weight: 21100lbs Gender: male
+                    <br> HP: 399 Type: Human
+                    <br> Attack: 99 Defense: 99
+                    <br> Special Attack: 90
+                    <br> Special Defense: 90
+                    <br> Abilities: Intelligence, use of technology</strong>
+            </div>
+            <div class="col s3 center">
+                <H2 class="h2Stuff">I am RICHARDO-AI</H2>
+            </div>
+            <div class="col s2 myheader">
+                <img class="imgGodz z-depth-5" src="imagestuff/godzilla.png">
+            </div>
+        </div>
+    </div>
+    <!-- images, animation -->
+    <div class="row col m7 right blink">
+        <p class="namepoke1">"Gotta Catch 'Em All"</p>
+    </div>
+    <div class="row">
+        <div class="col m3">
+            <img class="imgBall" src="imagestuff/pokeball-empty.png">
+        </div>
+        <div class="col m6 center">
+            <div class="glass">
+                <div class="card transparent z-depth-5">
+                    <!-- <img class="imgGrass " src="/Users/macuser/Documents/NYCode+DesignAcademy/projects/personalPokedex/imagestuff/grassfield.jpg"> -->
+                    <!-- small center arcanine  -->
+                    <img class="imgPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/59.png">
+                </div>
+
+            </div>
+        </div>
+        <div class="col m1 right">
+            <!-- make this one blink -->
+            <img class="imgPokemon1 blink" src="imagestuff/arcaninePokemon.jpeg">
+        </div>
+    </div>
+
+    <!-- API pokemon 3 cards -->
+    <div id="container">
+        <br>
+        <br>
+        <div class="row center">
+            <div class="col s4 center ">
+                <div id="divcd1" class="card medium teal ">
+
+                    <!-- js writes -->
+                </div>
+            </div>
+
+            <div class="col s4  center ">
+                <div id="divcd2" class="card medium teal ">
+
+                    <!-- js writes -->
+                </div>
+            </div>
+            <div class="col s4 center ">
+                <div id="divcd3" class="card medium teal ">
+
+                    <!-- js writes -->
+                </div>
+            </div>
+
+            <a class="waves-effect waves-light btn-large " id="goHome2">Home</a>
+        </div>
+    </div>
+    </div>
+    <!-- about  -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="about" id="about">
+        <br>
+        <br>
+        <span class="teal-text namepoke1 center">
+            <h2>Pokémon</h2>
+        </span>
+        <p class="teal-text namepoke1 center">Pokémon is a Japanese game that is international. It was created by Satoshi Tajiri and Ken Sugimori. The original
+            concept was thought of in 1996 and Pokémon were originally called Pocket Monsters, Red and Green.
+        </p>
+        <p class="teal-text namepoke1 center">The franchise has spanned all boaders, and from cards to computers, hand helds, and now played on the phone. There
+            are many Pokémon to catch, about 800 in total with new monsters added with every update. The term "Gotta Catch
+            'Em All" is a an English slogan that was coined in the United States.
+        </p>
+        <p class="teal-text namepoke1 center"> By the way this is Pokémon text or what we like to call font!</p>
+        <p class="teal-text namepoke1 center">If you want an in depth Pokémon history please go to Wikipedia.</p>
+        <div class="row center ">
+            <h4>
+                <a class="aboutp " href="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Visit Wikipedia</a>
+            </h4>
+            <a class="waves-effect waves-light btn-large " id="goHome">Home</a>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- More detailed list of my pokemans from classes-->
+
+    <section>
+        <div id="myList1"></div>
+        <div id="movesbaby"></div>
+        <div class="card-action center">
+            <button id="broo" class="teal white-text waves-effect">Broo hahaha
+                <br>
+            </button>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- search for and create trainer -->
+    <section id="newTrainerAddPokemon">
+        <h3 class="center teal-text">Hello future trainer!</h3>
+        <div class="wrapper center">
+            <form id="searchBaby">
+                <label id="nameLable" for="inputTrainerName">trainer name:</label>
+                <input id="inputTrainerName" type="text" maxlength="15">
+                <label id="numLable" for="inputNumber">Search Pokemon, pick a number between 1 and 807:</label>
+                <input id="inputNumber" type="number" maxlength="3">
+                <label id="heightLable" for="inputheight">height:</label>
+                <input id="inputheight" type="number" maxlength="3">
+                <label id="weightLable" for="inputweight">weight:</label>
+                <input id="inputweight" type="number" maxlength="3">
+                <label id="genderLable" for="inputgender">gender:</label>
+                <input id="inputgender" type="text" maxlength="5">
+                <label id="hplabel" for="inputhp">hp:</label>
+                <input id="inputhp" type="number" maxlength="3">
+                <label id="typelabel" for="inputtype">type:</label>
+                <input id="inputtype" type="text" maxlength="8">
+                <!-- <button onclick="getinfor()">GetInfor</button> -->
+                <input id="getsIt" type="button" value="Search">
+                <div id="getSearchPoke"></div>
+            </form>
+            <br>
+            <br>
+            <a class="waves-effect waves-light btn-large " id="goHome1">Home</a>
+        </div>
+
+        <footer>
+            <br>
+            <br>
+            <br>
+            <img class="imageLogo" alt="Pokémon logo" src="imagestuff/International_Pokémon_logo.svg.png">
+            <p class="center teal white-text">Thank you for looking at my website!</p>
+        </footer>
+    </section>
+    <!-- scripts -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- <script src=pokeData.js></script> -->
+    <script src=poke.js></script>
+</body>
+
+</html>
