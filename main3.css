@@ -89,7 +89,26 @@ header a:hover{
     
 }
 
+/* #section-3{
+    background-image: image("battle1.jpg")
 
+} */
+
+.mybackground{
+    background-image: url("map-pokemon.jpg"); 
+     position: relative;
+    top: 0;
+    left: 0;
+    background-color: #1F2D3D;
+    opacity: .7;
+    height: 670px;
+    
+} 
+
+/* .mycarousel{
+    position: relative;
+    top: 0;
+    left: 0; */
 
 #section-2, #section-4 {
     background-color: #131414; 
@@ -211,4 +230,9 @@ footer {
 
 .carousel{
     margin-top: 150px;
+    
 }
+
+/* #second-image{
+    z-index: -99 !important;
+} */
