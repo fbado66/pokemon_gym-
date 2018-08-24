@@ -12,13 +12,13 @@ body {
     background-color: black;
  }
   
-  .trainer_1{
+  /* .trainer_1{
       width: 500px; 
-  }
+  } */
 
-  #trainer2{
+  /* #trainer2{
       height: 230px; 
-  }
+  } */
 
   .trainer_2{
     width: 500px; 
@@ -38,6 +38,11 @@ body {
 header{
     background-color: black
 }
+
+#section-2{
+    height: 2450px;
+}
+
 
 #section-4 {
     height: 850px;
@@ -224,14 +229,14 @@ footer {
 
 
 .poke-monster{
-    color: black; 
+    color:#8E1F0B;
     font-size: 70px; 
     margin-top: 40px;     
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-weight: 1000 ;
+        font-weight: 900;
         padding: 50px;
 }
 
