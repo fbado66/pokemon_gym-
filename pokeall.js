@@ -15,12 +15,16 @@ class Trainer {
     constructor(name) {
         this.name = name;
         this.pokemonArray = [];
-        this.trainer = [];
+        this.trainer = [];//our gym
+        this.enemy = []; //enemy via search
     }
 
     //gets the pokemon in the trainer 
     add(pokemon) {
         this.pokemonArray.push(pokemon)
+    }
+    addEnemy(uglyMonster){
+        this.enemy.push(uglyMonster);
     }
     addTR(trainer) {
         this.trainer.push(trainer);
@@ -36,7 +40,41 @@ class Trainer {
             this.pokemonArray.forEach(element => {
                 console.log(element)
             }))
+    }
+     //example of putting all the data on the screen////
+     getAllPokemon() {
+     let div = document.getElementById("myList1");
+     let divCard = document.createElement("div");
+     divCard.setAttribute("id", "attriblist");
+     this.pokemonArray.forEach(element => { //use element.whatever to get data
+         let divCard = document.createElement("div");
 
+         divCard.innerHTML = `
+         <h2 class="center teal">${this.name}</h2>
+         <h3 class="header myListName">${element.name}</h3>
+         <div class="card horizontal">
+         <div class="card-image">
+              <img class="pokeList" src="${element.image}" alt="Arcanine" width="200">
+         </div>
+         <div class="card-stacked">
+             <div class="card-content myListContent">
+                 <p>ID: ${element.id}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${element.item }\u00A0\u00A0\u00A0\u00A0\  Type: ${element.type}</p>
+                 <p>Height: ${element.height  }\u00A0\u00A0\u00A0\u00A0\ Weight: ${element.weight}\u00A0\u00A0\u00A0\u00A0\ Ability: ${element.ability}</p>
+                 <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
+                 <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
+                 <h3>Making Moves with Accuracy, Power and Priority</h3>
+                
+         </div>
+             
+         </div>
+         </div>
+         `
+         div.appendChild(divCard);
+        });
+        //  <p>${this.pokemonArray[0].moves[0]}</p>
+        //          <p>${this.pokemonArray[0].moves[1]}</p>
+        //          <p>${this.pokemonArray[0].moves[2]}</p>
+        //          <p>${this.pokemonArray[0].moves[3]}</p>
     }
 }
 
@@ -44,20 +82,18 @@ class Trainer {
 //   let Richardo_AI = new Trainer("Richardo_AI");
 let f = new Trainer("Hakuna_Matata");
 let r = new Trainer("Richardo_AI");
-let gym = new Trainer("poke_monster_gym")
+let e = new Trainer("Time_for_a_beat_down");
+let gym = new Trainer("poke_monster_gym");
 
-// setTimeout(function () {
-//     for (let r = 0, f = 1; r < gym.length; r + 2, f + 2) {
-//         console.log(gym.pokemonArray[r]);
-//         console.log(gym.pokemonArray[f]);
-//         r.add(gym.pokemonArray[r]);
-//         f.add(gym.pokemonArray[f]);
-//     }
-// }, 3000);
 setTimeout(function () {
+    r.add(gym.pokemonArray[0]);
+    f.add(gym.pokemonArray[1]);
+    r.add(gym.pokemonArray[2]);
+    f.add(gym.pokemonArray[3]);
+    r.add(gym.pokemonArray[4]);
+    f.add(gym.pokemonArray[5]);
+}, 9000);
 
-
-}, 3000);
 class Pokemon {
     constructor(data, getItem, getMoves) {
         this.id = data.id;
@@ -92,13 +128,15 @@ let urlArr = ["http://fizal.me/pokeapi/api/59.json",
 //function getDelayAxios(doitLater){
 
 let getUrl = urlArr.map(url => axios.get(url));
+
 axios.all(getUrl)
     .then(function (result) {
 
 
         for (let i = 0, k = 1; i < result.length; i++) {
-            //console.log(result[i].data)
-            monster = new Pokemon(result[i].data, getItem());
+            console.log(result[i].data)
+
+            monster = new Pokemon(result[i].data, getItem(),getMoves());
 
 
 
@@ -114,45 +152,40 @@ axios.all(getUrl)
                 }
             }
             //four moves only. Call new axios for moves and accruacy, power and priority
-            // function getMoves() {
-            //     makingMoves = result[i].data.moves;
-            //     let move = [];
-            //     let ctr = makingMoves.length;
-            //     for (let i = 0; i < 4; i++) {
-            //         let randMoves = Math.floor(Math.random() * ctr);
-            //         axios.get(makingMoves[randMoves].move.url)
-            //             .then(function (resBonus) {
-            //                 let bong = resBonus.data;
-            //                 //console.log(bong);
-            //                 // console.log(
-            //                 //     `Moves${i}: ${makingMoves[randMoves].move.name}
-            //                 //  Accruacy: ${bong.accuracy}
-            //                 //  Power: ${bong.power}
-            //                 //  Priority: ${bong.priority}`);
+            function getMoves() {
+                makingMoves = result[i].data.moves;
+                let move = [];
+                let ctr = makingMoves.length;
+                for (let i = 0; i < 4; i++) {
+                    let randMoves = Math.floor(Math.random() * ctr);
+                    axios.get(makingMoves[randMoves].move.url)
+                        .then(function (resBonus) {
+                            let bong = resBonus.data;
+                            //console.log(bong);
+                            // console.log(
+                            //     `Moves${i}: ${makingMoves[randMoves].move.name}
+                            //  Accruacy: ${bong.accuracy}
+                            //  Power: ${bong.power}
+                            //  Priority: ${bong.priority}`);
 
-            //                 move.push(`Moves${i}: \u00A0\u00A0${makingMoves[randMoves].move.name}\u00A0\u00A0
-            //                                     Accuracy: ${bong.accuracy}\u00A0\u00A0
-            //                                     Power: ${bong.power}\u00A0\u00A0
-            //                                     Priority: ${bong.priority}`);
+                            move.push(`Moves${i}: \u00A0\u00A0${makingMoves[randMoves].move.name}\u00A0\u00A0
+                                                Accuracy: ${bong.accuracy}\u00A0\u00A0
+                                                Power: ${bong.power}\u00A0\u00A0
+                                                Priority: ${bong.priority}`);
 
-            //             }).catch(function (response) {
-            //                 console.error(response);
-            //             })
-            //     }
-            //     return move
+                        }).catch(function (response) {
+                            console.error(response);
+                        })
+                }
+                return move
 
-            // }
+            }
 
             gym.add(monster);
-            //doitLater(monster);
+            
 
         }
-        // for (let r =0,f=1;r<gym.length;r+2,f+2){
-        //     console.log(gym.pokemonArray[r]);
-        //     console.log(gym.pokemonArray[f]);
-        //     r.add(gym.pokemonArray[r]);
-        //     f.add(gym.pokemonArray[f]);
-        // }
+        
 
     }).catch((error) => {
         console.log(error)
@@ -161,219 +194,67 @@ axios.all(getUrl)
 
 //}
 
+//search feature
+function getThePokemans(response) {
+    axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
+        .then(function (result) {
+            console.log(result.data);
+            monster = new Pokemon(result.data, getItem(),getMoves());
+            
 
+            function getItem() {
+                let stuff = result.data.held_items[0];
+                if (stuff === undefined) {
+                    //console.log(`Item: none`);
+                    return `None`;
+                } else {
+                    //console.log(`Item: ${result[i].data.held_items[0].item.name}`);
+                    return `${result.data.held_items[0].item.name}`;
+                }
+            }
+            //four moves only. Call new axios for moves and accruacy, power and priority
+            function getMoves() {
+                makingMoves = result.data.moves;
+                let move = [];
+                let ctr = makingMoves.length;
+                for (let i = 0; i < 4; i++) {
+                    let randMoves = Math.floor(Math.random() * ctr);
+                    axios.get(makingMoves[randMoves].move.url)
+                        .then(function (resBonus) {
+                            let bong = resBonus.data;
+                            //console.log(bong);
+                            // console.log(
+                            //     `Moves${i}: ${makingMoves[randMoves].move.name}
+                            //  Accruacy: ${bong.accuracy}
+                            //  Power: ${bong.power}
+                            //  Priority: ${bong.priority}`);
 
+                            move.push(`Moves${i}: \u00A0\u00A0${makingMoves[randMoves].move.name}\u00A0\u00A0
+                                                Accuracy: ${bong.accuracy}\u00A0\u00A0
+                                                Power: ${bong.power}\u00A0\u00A0
+                                                Priority: ${bong.priority}`);
 
+                        }).catch(function (response) {
+                            console.error(response);
+                        })
+                }
+                return move
 
-//   axios.get("https://fizal.me/pokeapi/api/4.json")
-//   .then((response) => {
+            }
 
-//     let data = response.data
+           
+        e.addEnemy(monster);
+        
 
-//    let charmander = new Pokemon(data);
-//    hakuna_matata.add(charmander);
-//    console.log(hakuna_matata.get("charmander"));
+        }).catch(function (response) {
+            console.error(response);
+        })
 
-//    let first_pokemon = document.createElement("ol")
-//    first_pokemon.innerHTML =[`Name:\xa0${charmander.name}\xa0`+
-//    `\xa0\xa0\xa0\xa0\xa0\xa0\xa0`+ `` + `\xa0\xa0\xa0\xa0\xa0\xa0\xa0` +`
-//    Attack Interger:\xa0${charmander.attack}`+
-//    `\xa0\xa0\xa0\xa0\xa0\xa0\xa0`+`
-//   Defense Integer:   ${charmander.defense}`+
-//   `\xa0\xa0\xa0\xa0\xa0\xa0\xa0`+`
-//   Abilities: `+``+`
-//    ${charmander.abilities}`+
-//    `\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0`+`
-//   HP Integer:\xa0${charmander.Hp}`]
+}
 
-//    ol.appendChild(first_pokemon)``
+document.getElementById("myBtn").addEventListener("click", displayPokeList);
 
-
-// }).catch((error) => {
-//   console.log(error)
-// })
-
-
-
-
-
-
-
-
-// function getThePokemans(trainername, response) {
-//     axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
-//         .then(function (res) {
-//             let bing = res.data;
-//             // console.log(bing);
-
-//             // I used return console log and pushed data to my to obj for testing. I used functions and some variables for data.
-//             function getId() {
-//                 console.log(`ID: ${bing.id}`);
-//                 obj.id = bing.id;
-//                 return bing.id;
-//             }
-
-//             function getName() {
-//                 console.log(bing.name);
-//                 obj.name = bing.name;
-//                 return bing.name;
-//             }
-
-//             function getType() {
-//                 console.log(`Type: ${bing.types[0].type.name}`);
-//                 obj.type = bing.types[0].type.name;
-//                 return bing.types[0].type.name;
-//             }
-
-
-//             function getItem() {
-//                 let stuff = bing.held_items[0];
-//                 if (stuff === undefined) {
-//                     console.log(`Item: none`);
-//                     obj.item = "None";
-//                     return `None`;
-//                 } else {
-//                     console.log(`Item: ${bing.held_items[0].item.name}`);
-//                     obj.item = `${bing.held_items[0].item.name}`;
-//                     return `${bing.held_items[0].item.name}`;
-//                 }
-//             }
-
-
-//             function getAbility() {
-//                 abil = bing.abilities.length;
-//                 let randAbil = Math.floor(Math.random() * abil);
-//                 console.log(`Ability: ${bing.abilities[randAbil].ability.name}`);
-//                 obj.ability = `${bing.abilities[randAbil].ability.name}`;
-//                 return `${bing.abilities[randAbil].ability.name}`;
-//             }
-
-
-//             function getHeight() {
-//                 console.log(`Height: ${bing.height}`);
-//                 obj.height = bing.height;
-//                 return bing.height;
-//             }
-
-
-//             function getWeight() {
-//                 console.log(`Weight: ${bing.weight}`);
-//                 obj.weight = bing.weight;
-//                 return bing.weight;
-//             }
-
-
-//             function getStats() {
-//                 for (let k = 0; k < bing.stats.length; k++) {
-//                     console.log(`${bing.stats[k].stat.name}: ${bing.stats[k].base_stat} `);
-
-
-
-//                 }
-
-
-//             }
-//                 obj.speed = `${bing.stats[0].stat.name}: ${bing.stats[0].base_stat} `;
-//                 let speed = `${bing.stats[0].stat.name}: ${bing.stats[0].base_stat} `;
-//                 obj.hp = `${bing.stats[5].base_stat}`;
-//                 let hp = `${bing.stats[5].base_stat}`;
-//                 obj.specialDefense = `${bing.stats[1].stat.name}: ${bing.stats[1].base_stat} `;
-//                 let specialDefense = `${bing.stats[1].stat.name}: ${bing.stats[1].base_stat} `;
-//                 obj.specialAttack = `${bing.stats[2].stat.name}: ${bing.stats[2].base_stat} `;
-//                 let specialAttack = `${bing.stats[2].stat.name}: ${bing.stats[2].base_stat} `;
-//                 obj.defense = `${bing.stats[3].stat.name}: ${bing.stats[3].base_stat} `;
-//                 let defense = `${bing.stats[3].stat.name}: ${bing.stats[3].base_stat} `;
-//                 obj.attack = `${bing.stats[4].stat.name}: ${bing.stats[4].base_stat} `;
-//                 let attack = `${bing.stats[4].stat.name}: ${bing.stats[4].base_stat} `;
-
-//             //four moves only. Call new axios for moves and accruacy, power and priority
-//             function getMoves() {
-//                 makingMoves = bing.moves;
-//                 let move = [];
-//                 let ctr = makingMoves.length;
-//                 for (let i = 0; i < 4; i++) {
-//                     let randMoves = Math.floor(Math.random() * ctr);
-//                     axios.get(makingMoves[randMoves].move.url)
-//                         .then(function (resBonus) {
-//                             let bong = resBonus.data;
-//                             //console.log(bong);
-//                             console.log(
-//                                 `Moves${i}: ${makingMoves[randMoves].move.name}
-//                              Accruacy: ${bong.accuracy}
-//                              Power: ${bong.power}
-//                              Priority: ${bong.priority}`);
-
-//                             move.push(`Moves${i}: \u00A0\u00A0${makingMoves[randMoves].move.name}\u00A0\u00A0
-//                                                     Accuracy: ${bong.accuracy}\u00A0\u00A0
-//                                                     Power: ${bong.power}\u00A0\u00A0
-//                                                     Priority: ${bong.priority}`);
-
-//                         }).catch(function (response) {
-//                             console.error(response);
-//                         })
-//                 }
-//                 return obj.moves = move;//for testing purpoese
-
-//             }
-
-//             function getImage() {
-//                 console.log(`Image: ${bing.sprites.front_shiny}`);
-//                 obj.image = `${bing.sprites.front_shiny}`
-//                 return bing.sprites.front_shiny;
-//             }
-
-//             //below is constructor information
-//             // id, name, type, item, ability,
-//             // height, weight, speed, attack, hp, defense,
-//             // specialAttack, specialDefense, moves,
-//             // image) 
-
-
-//             let nameofPOke = bing.name;
-
-//             nameofPOke = new Pokeman(getId(),
-//                 getName(), getType(), getItem(),
-//                 getAbility(), getHeight(), getWeight(),
-//                 bing.stats[0].base_stat, bing.stats[4].base_stat,
-//                 bing.stats[5].base_stat, bing.stats[3].base_stat, bing.stats[2].base_stat,
-//                 bing.stats[1].base_stat, getMoves(), bing.sprites.front_shiny);
-
-//             let divcardSearch = document.getElementById("getSearchPoke");
-//             let divInfo = document.createElement("div");
-//             divInfo.setAttribute("class", "center");
-//             divInfo.innerHTML = `
-//             <h2 class="center teal">Trainer Name: ${trainername.trainername}</h2>
-//             <h4 class="center teal">Height: ${trainername.height}\u00A0\u00A0\ Weight: ${trainername.weight}\u00A0\u00A0\ Gender: ${trainername.gender}\u00A0\u00A0\ 
-//             HP: ${trainername.hp}\u00A0\u00A0\ Type: ${trainername.type}</h4>
-//             <h3 class="header myListName">${getName()}</h3>
-//             <div class="card horizontal">
-//             <div class="card-image">
-//                  <img class="pokeList" src="${bing.sprites.front_shiny}" alt="Arcanine" width="200">
-//             </div>
-//             <div class="card-stacked">
-//                 <div class="card-content myListContent">
-//                     <p>ID: ${getId()}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${getItem() }\u00A0\u00A0\u00A0\u00A0\  Type: ${getType()}</p>
-//                     <p>Height: ${getHeight() }\u00A0\u00A0\u00A0\u00A0\ Weight: ${getWeight()}\u00A0\u00A0\u00A0\u00A0\ Ability: ${getAbility()}</p>
-//                     <p>Attack: ${attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${defense  }\u00A0\u00A0\u00A0\u00A0\ HP:${hp} </p>
-//                     <p>Special Attack: ${specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${specialDefense}\u00A0\u00A0\u00A0\u00A0\  ${speed}</p>
-
-//             </div>
-
-//             </div>
-//             </div> `
-
-
-//             divcardSearch.appendChild(divInfo);
-
-//             console.log( trainername);//name does get passed and printed to console.
-
-
-//             trainer = new Trainer(trainername.trainername,trainername.height,trainername.weight,trainername.gender,trainername.hp,trainername.type)
-//             trainer.addPokemon(nameofPOke);
-
-
-//         }).catch(function (response) {
-//             console.error(response);
-//         })
-
-// }
+function displayPokeList() {
+    r.getAllPokemon();
+    f.getAllPokemon();
+}
