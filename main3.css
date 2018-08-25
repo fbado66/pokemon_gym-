@@ -39,9 +39,9 @@ header{
     background-color: black
 }
 
-/* #section-2{
-    height: 2450px;
-} */
+#section-2{
+    height: 1100px;
+}
 
 
 #section-4 {
@@ -186,7 +186,9 @@ a{
 }
   
 
-
+#trainer4{
+    width: 40%
+}
 
 li{ 
     margin-right: 0;
@@ -251,10 +253,16 @@ footer {
     
 }
 
+#franklin{
+    padding-left: 60px; 
+}
 
+#rich{
+    padding-right: 60px;
+}
 #trainer3{
     width: 110px;
-}
+} 
 /* #second-image{
     z-index: -99 !important;
 } */
