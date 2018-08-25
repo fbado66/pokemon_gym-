@@ -10,6 +10,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="main3.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="franklin.js" defer></script>
+  <script src="main.js" defer></script>
+
 
 
     <title>POKE-MONSTERS</title>
@@ -54,9 +58,9 @@
 
 
 <header>
-    <section id = "section-1" class = "container" >
+    <section id = "section-1"  >
        
-        <div class="col s12 m12 l12"> <img id ="top-image" src=battle1.jpg alt="logo"> </div>
+         <img id ="top-image" src=battle1.jpg alt="logo"> 
       
        <span class="poke-monster" > POKE MONSTERS</span>
        <!-- <h1 class="text-align: center ptext">Welcome to my Pokédex</h1> -->
@@ -65,81 +69,130 @@
 
 <main>
 <section id = "section-2" class ="logo">
-        <div> <h1> TRAINERS </h1> </div>
-        <div class="col s12 m12 l7">
-            <!-- <div class="trainer_3"> -->
-                    <ul class="collapsible">
-                            <li>
-                              <div>
-                                 <img  id="trainer4" src="imagestuff/godzilla.png" alt="" srcset=""> 
-                                 
-
-                              
-                                <img  id="trainer4" src="trainer.jpg" alt="" srcset=""> 
-                              <div><span id="rich">I am Rich </span> 
-                              <span id="franklin"> Franklin </span></div>
-                            
-                            </div>
-                            <div class="collapsible-header #e53935 red darken-1"><i class="material-icons">
-                                <img  src="pokeball.png" alt="logo" />
-                               </i> <span class ="Pokemom-text"> Pokemon 1 </span></div>
-                            <div class="collapsible-body center"><span>
-
-                              <!-- information for your first pokemon, append here  -->
-
-                            </span></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header #e53935 red darken-1"><i class="material-icons">
-                                  <img src="pokeball.png" alt="logo" />
-                                </i> <span class ="Pokemom-text"> Pokemon 2 </span></div>
-                              <div class="collapsible-body center "><span>
-
-
-                                 <!-- information for your second pokemon, append here  -->
-                              
-                              
-                              </span></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
-                               </i> <span class ="Pokemom-text"> Pokemon 3 </span></div>
-                              <div class="collapsible-body"><span>
-                                
-                                 <!-- information for your third pokemon, append here  -->
-                              
-                                </span></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
-                               </i> <span class ="Pokemom-text"> Pokemon 4 </span></div>
-                              <div class="collapsible-body"><span>
-                                
-                                 <!-- information for your fourth pokemon, append here  -->
-                              
-                                </span></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
-                               </i> <span class ="Pokemom-text"> Pokemon 5 </span></div>
-                              <div class="collapsible-body"><span>
-                                
-                                 <!-- information for your fifth pokemon, append here  -->
-                              
-                                </span></div>
-                            </li>
-                            <li>
-                              <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
-                              </i> <span class ="Pokemom-text"> Pokemon 6 </span> </div>
-                      
-                              <div class="collapsible-body"><span>
-                                
-                                 <!-- information for your sixth pokemon, append here  -->
-                              
-                                </span></div>
-                              </li>
-                    </ul>
+  <div> <h1> TRAINERS </h1> </div>
+    <div class="col s12 m12 l7">
+        <!-- //////////////////// Display of trainers ///////////////////////////// -->
+    <ul class="collapsible">
+         <li>
+            <div>
+              <img id="trainer4" src="imagestuff/godzilla.png" alt="" srcset=""> 
+              <img  id="trainer4" src="trainer.jpg" alt="" srcset=""> 
+                 <div><span id="rich">I am Rich </span> 
+                      <span id="franklin"> Franklin </span>
+                </div>
             </div>
+ 
+<!-- ///////////////////Display for first pokebeast Charmander //////////////////////////////////// -->
+               <div class="collapsible-header #e53935 red darken-1">
+                  <i class="material-icons">
+                <img src="pokeball.png" alt="logo" />
+                 </i>
+                <span class ="Pokemom-text"> Pokemon 1 </span></div>
+                  <div class="collapsible-body center">
+                   <div class="beast_display"> <img src="charmandergif.gif" alt="" srcset=""></div>
+                   <div = id="divcd1" class="stats_display"> </div>
+                           
+                  <!-- stats-display for the first pokemon  -->
+                          
+               </div>
+          </li>
+
+ <!-- ///////////////////Display for second pokebeast Lapras//////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+               <i class="material-icons">
+              <img src="pokeball.png" alt="logo" />
+              </i>
+              <span class ="Pokemom-text"> Pokemon 2 </span>
+            </div>
+              <div class="collapsible-body center ">
+                  <div class="beast_display"> <img id="lap" src="laprasgif.gif" alt="" srcset=""></div>
+                  <div = id="divcd2" class="stats_display"></div>
+              </div>
+
+              <!-- stats-display for the second pokemon  -->          
+                                               
+          </li>
+
+<!-- ///////////////////Display for third pokebeast Mewtwo //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons">
+                 <img src="pokeball.png" alt="pokeball" srcset="">
+            </i> 
+            <span class ="Pokemom-text"> Pokemon 3 </span>
+           </div>
+              <div class="collapsible-body">
+               <div class="beast_display_mewtwo"> <img src="mew-two.gif" alt="" srcset=""></div>
+                <div = id="divcd3" class="stats_display">   </div>
+              </div>
+            <!-- stats-display for the third pokemon  -->  
+
+             
+          </li>
+
+<!-- ///////////////////Display for fourth pokebeast //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons">
+              <img src="pokeball.png" alt="pokeball" srcset="">
+              </i>
+               <span class ="Pokemom-text"> Pokemon 4 </span>
+            </div>
+            <div class="collapsible-body">
+                <div class="beast_display"> <img src="charmandergif.gif" alt="" srcset=""></div>
+                <div = id="divcd4" class="stats_display">   </div>
+
+            <!-- stats-display for the fourth pokemon  -->  
+
+            </div>
+          </li>
+
+<!-- ///////////////////Display for fifth pokebeast //////////////////////////////////// -->
+          
+         
+         <li>
+           <div class="collapsible-header #e53935 red darken-1">
+             <i class="material-icons"> 
+               <img src="pokeball.png" alt="pokeball" srcset="">
+             </i>
+              <span class ="Pokemom-text"> Pokemon 5 </span>
+           </div>
+              <div class="collapsible-body">
+                  <div class="beast_display"> <img src="charmandergif.gif" alt="" srcset=""></div>
+                  <div = id="divcd5" class="stats_display">   </div>
+  
+              <!-- stats-display for the fifth pokemon  -->  
+  
+            </div>
+
+         </li>
+
+
+ <!-- ///////////////////Display for sixth pokebeast //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons"> 
+                <img src="pokeball.png" alt="pokeball" srcset=""> 
+              </i>
+                <span class ="Pokemom-text"> Pokemon 6 </span>
+            </div>
+                      
+            <div class="collapsible-body">
+                <div class="beast_display"> <img src="charmandergif.gif" alt="" srcset=""></div>
+                <div = id="divcd6" class="stats_display">   </div>
+
+            <!-- stats-display for the sixth pokemon  -->  
+
+            </div>
+
+          </li>
+    </ul>
+    </div>
           
  </section> 
 
@@ -280,8 +333,8 @@
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="main.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<!-- <script src="main.js"></script> -->
 </body>
 </html>
 

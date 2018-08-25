@@ -40,7 +40,7 @@ header{
 }
 
 #section-2{
-    height: 1100px;
+    height: 1500px;
 }
 
 
@@ -266,3 +266,20 @@ footer {
 /* #second-image{
     z-index: -99 !important;
 } */
+
+.stats_display{
+    color: white; 
+}
+.beast_display{
+    float: left;
+}
+.beast_display_mewtwo{
+    float: left; 
+   height: 250px;
+   overflow: hidden;
+  
+}
+
+#lap{
+    padding-right: 70px; 
+}
