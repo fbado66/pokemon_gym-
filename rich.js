@@ -12,38 +12,38 @@
 //charmander
 //"https://fizal.me/pokeapi/api/4.json"
 
-class Trainer {
-    constructor(name) {
-        this.name = name;
-        this.pokemonArray = [];
-        this.trainer = [];//our gym
-        this.enemy = []; //enemy via search
-    }
+// class Trainer {
+//     constructor(name) {
+//         this.name = name;
+//         this.pokemonArray = [];
+//         this.trainer = [];//our gym
+//         this.enemy = []; //enemy via search
+//     }
 
-    //gets the pokemon in the trainer 
-    add(pokemon) {
-        this.pokemonArray.push(pokemon)
-    }
-    addEnemy(uglyMonster){
-        this.enemy.push(uglyMonster);
-    }
-    addTR(trainer) {
-        this.trainer.push(trainer);
-    }
-    //adds the pokemon to the pokemon array 
-    get(name) {
-        return this.pokemonArray.find((element) => {
-            return element.name == name;
-        })
-    }
-    gettrainerPokesData() {
-        return (this.name,
-            this.pokemonArray.forEach(element => {
-                console.log(element)
-            }))
+    // //gets the pokemon in the trainer 
+    // add(pokemon) {
+    //     this.pokemonArray.push(pokemon)
+    // }
+    // addEnemy(uglyMonster){
+    //     this.enemy.push(uglyMonster);
+    // }
+    // addTR(trainer) {
+    //     this.trainer.push(trainer);
+    // }
+    // //adds the pokemon to the pokemon array 
+    // get(name) {
+    //     return this.pokemonArray.find((element) => {
+    //         return element.name == name;
+    //     })
+    // }
+    // gettrainerPokesData() {
+    //     return (this.name,
+    //         this.pokemonArray.forEach(element => {
+    //             console.log(element)
+    //         }))
 
-    }
-}
+    // }
+// }
 
 //   let hakuna_matata = new Trainer("Hakuna_Matata");
 //   let Richardo_AI = new Trainer("Richardo_AI");
@@ -59,46 +59,47 @@ let gym = new Trainer("poke_monster_gym");
 //         r.add(gym.pokemonArray[r]);
 //         f.add(gym.pokemonArray[f]);
 //     }
-// }, 3000);
-setTimeout(function () {
-    r.add(gym.pokemonArray[0]);
-    f.add(gym.pokemonArray[1]);
-    r.add(gym.pokemonArray[2]);
-    f.add(gym.pokemonArray[3]);
-    r.add(gym.pokemonArray[4]);
-    f.add(gym.pokemonArray[5]);
-}, 9000);
+// // }, 3000);
+// setTimeout(function () {
+//     r.add(gym.pokemonArray[0]);
+//     f.add(gym.pokemonArray[1]);
+//     r.add(gym.pokemonArray[2]);
+//     f.add(gym.pokemonArray[3]);
+//     r.add(gym.pokemonArray[4]);
+//     f.add(gym.pokemonArray[5]);
+// }, 9000);
 
-class Pokemon {
-    constructor(data, getItem, getMoves) {
-        this.id = data.id;
-        this.name = data.name,
-            this.type = data.types[0].type.name;
-        this.attack = data.stats[4].base_stat,
-            this.defense = data.stats[3].base_stat,
-            this.abilities = [`${data.abilities[0].ability.name}` + `\xa0\xa0\xa0\xa0` + `${data.abilities[1].ability.name}`],
-            this.hp = data.stats[5].base_stat
-        this.speed = data.stats[0].base_stat;
-        this.specialDefense = data.stats[1].base_stat;
-        this.specialAttack = data.stats[2].base_stat
-        this.height = data.height;
-        this.weight = data.weight;
-        this.image = data.sprites.front_shiny;
-        this.getItem = getItem;
-        this.getMoves = getMoves;
-    }
+// class Pokemon {
+//     constructor(data, getItem, getMoves) {
+//         this.id = data.id;
+//         this.name = data.name,
+//             this.type = data.types[0].type.name;
+//         this.attack = data.stats[4].base_stat,
+//             this.defense = data.stats[3].base_stat,
+//             this.abilities = [`${data.abilities[0].ability.name}` + `\xa0\xa0\xa0\xa0` + `${data.abilities[1].ability.name}`],
+//             this.hp = data.stats[5].base_stat
+//         this.speed = data.stats[0].base_stat;
+//         this.specialDefense = data.stats[1].base_stat;
+//         this.specialAttack = data.stats[2].base_stat
+//         this.height = data.height;
+//         this.weight = data.weight;
+//         this.image = data.sprites.front_shiny;
+//         this.getItem = getItem;
+//         this.getMoves = getMoves;
+//     }
 
-}
+// }
+/////////////////// wraps the axios behavior in a function to be executed elsewhere /////////////////////////////////////
 
-
-
-let urlArr = ["http://fizal.me/pokeapi/api/59.json",
-    "https://fizal.me/pokeapi/api/131.json",
-    "http://fizal.me/pokeapi/api/82.json",
-    "https://fizal.me/pokeapi/api/150.json",
-    "http://fizal.me/pokeapi/api/355.json",
-    "https://fizal.me/pokeapi/api/4.json"
-]
+function richard_axios(number, doAfterNetworkCall) {
+  
+let urlArr = `https://fizal.me/pokeapi/api/59.json`
+//     // "https://fizal.me/pokeapi/api/131.json",
+//     "http://fizal.me/pokeapi/api/82.json",
+//     // // "https://fizal.me/pokeapi/api/150.json",
+//     "http://fizal.me/pokeapi/api/355.json",
+//     // "https://fizal.me/pokeapi/api/4.json"
+// ]
 
 //function getDelayAxios(doitLater){
 
@@ -161,13 +162,15 @@ axios.all(getUrl)
 
         }
         
-
+        doAfterNetworkCall(monster)  
     }).catch((error) => {
         console.log(error)
     })
 
 
-//}
+}
+/////////////////////axios wrapper ends here ////////////////////////////////////////////////
+
 
 //search feature
 function getThePokemans(response) {

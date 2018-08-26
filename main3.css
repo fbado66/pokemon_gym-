@@ -40,12 +40,12 @@ header{
 }
 
 #section-2{
-    height: 1500px;
+    height: 1350px;
 }
 
 
 #section-4 {
-    height: 850px;
+    height: 900px;
     /* padding: 2px; */
     text-align: center;
 }
@@ -113,7 +113,7 @@ header a:hover{
 } */
 
 .mybackground{
-    background-image: url("map-pokemon.jpg"); 
+    background-image: url("arena.jpg"); 
      position: relative;
     top: 0;
     left: 0;
@@ -215,7 +215,9 @@ span{
     color: white; 
 }
 
-
+image{
+    border: solid, red;
+}
 
 
 
@@ -232,7 +234,7 @@ footer {
 
 .poke-monster{
     color:#8E1F0B;
-    font-size: 70px; 
+    font-size: 72px; 
     margin-top: 40px;     
         position: absolute;
         top: 50%;
@@ -240,6 +242,8 @@ footer {
         transform: translate(-50%, -50%);
         font-weight: 900;
         padding: 50px;
+        /* background: rgba(0, 0, 0, 0.5); Black background with transparency */
+
 }
 
 .carousel-item{
@@ -250,6 +254,7 @@ footer {
 
 .carousel{
     margin-top: 150px;
+    overflow: visible !important
     
 }
 
@@ -282,4 +287,18 @@ footer {
 
 #lap{
     padding-right: 70px; 
+}
+
+#arc {
+    overflow: hidden;
+    height: 250px; 
+}
+
+#mag {
+    overflow: hidden;
+    height: 260px; 
+}
+#dus {
+    overflow: hidden;
+    height: 260px; 
 }
