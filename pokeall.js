@@ -11,7 +11,7 @@
 //charmander
 //"https://fizal.me/pokeapi/api/4.json"
 
-class Trainer {
+class RTrainer {
     constructor(name) {
         this.name = name;
         this.pokemonArray = [];
@@ -39,17 +39,7 @@ class Trainer {
         
 
     }
-    get(name) { //needs work
-        return this.pokemonArray.find((element) => {
-            return element.name == name;
-        })
-    }
-    gettrainerPokesData() { //needs work
-        return (this.name,
-            this.pokemonArray.forEach(element => {
-                console.log(element)
-            }))
-    }
+   
     getEnemyPokemonList(){
         let div = document.getElementById("myList2");
         let divCardEnemy = document.createElement("div");
@@ -126,10 +116,10 @@ class Trainer {
 
 //   let hakuna_matata = new Trainer("Hakuna_Matata");
 //   let Richardo_AI = new Trainer("Richardo_AI");
-let f = new Trainer("Hakuna_Matata");
-let r = new Trainer("Richardo_AI");
-let e = new Trainer("Time_for_a_beat_down");
-let gym = new Trainer("poke_monster_gym");
+//let f = new Trainer("Hakuna_Matata");
+let r = new RTrainer("Richardo_AI");
+let e = new RTrainer("Time_for_a_beat_down");
+// let gym = new RTrainer("poke_monster_gym");
 
 setTimeout(function () {
     r.add(gym.pokemonArray[0]);
@@ -298,13 +288,13 @@ function getThePokemans(response) {
 
 }
 
-document.getElementById("myBtn").addEventListener("click", displayPokeList);
+// document.getElementById("myBtn").addEventListener("click", displayPokeList);
 
-function displayPokeList() {
-    r.getAllPokemon();
-    f.getAllPokemon();
-    //r.pokemonArray[0];
-}
+// function displayPokeList() {
+//     r.getAllPokemon();
+//     f.getAllPokemon();
+//     //r.pokemonArray[0];
+// }
 /////////////////////////////////////////////////////////////////////////////////
 let count = 0;
 document.getElementById("myBtn1").addEventListener("click", displayAddEnemyPokemon)
@@ -318,47 +308,47 @@ function displayAddEnemyPokemon() {
        
 }
 
-document.getElementById("myBtn2").addEventListener("click", displayAllEnemyPokemon)
-function displayAllEnemyPokemon() { 
+// document.getElementById("myBtn2").addEventListener("click", displayAllEnemyPokemon)
+// function displayAllEnemyPokemon() { 
     
-    e.enemy.forEach(function(element) {
-        console.log(element);
-      });
-    e.getEnemyPokemonList()
-       let div = document.getElementById("myList3");
-         let divCard = document.createElement("div");
-         divCard.setAttribute("id", "attriblist");
-         e.enemy.forEach(element => { //use element.whatever to get data
+//     e.enemy.forEach(function(element) {
+//         console.log(element);
+//       });
+//     e.getEnemyPokemonList()
+//        let div = document.getElementById("myList3");
+//          let divCard = document.createElement("div");
+//          divCard.setAttribute("id", "attriblist");
+//          e.enemy.forEach(element => { //use element.whatever to get data
             
 
-             divCard.innerHTML = `
-          <h2 class="center teal">Enemy Pokemon List</h2>
-          <h3 class="header myListName">${element.name}</h3>
-          <div class="card horizontal">
-          <div class="card-image">
-               <img class="pokeList" src="${element.image}" alt="Arcanine" width="200">
-          </div>
-          <div class="card-stacked">
-              <div class="card-content myListContent">
-                  <p>ID: ${element.id}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${element.item }\u00A0\u00A0\u00A0\u00A0\  Type: ${element.type}</p>
-                  <p>Height: ${element.height  }\u00A0\u00A0\u00A0\u00A0\ Weight: ${element.weight}\u00A0\u00A0\u00A0\u00A0\ Ability: ${element.ability}</p>
-                  <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
-                  <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
-                  <h3>Making Moves with Accuracy, Power and Priority</h3>
+//              divCard.innerHTML = `
+//           <h2 class="center teal">Enemy Pokemon List</h2>
+//           <h3 class="header myListName">${element.name}</h3>
+//           <div class="card horizontal">
+//           <div class="card-image">
+//                <img class="pokeList" src="${element.image}" alt="Arcanine" width="200">
+//           </div>
+//           <div class="card-stacked">
+//               <div class="card-content myListContent">
+//                   <p>ID: ${element.id}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${element.item }\u00A0\u00A0\u00A0\u00A0\  Type: ${element.type}</p>
+//                   <p>Height: ${element.height  }\u00A0\u00A0\u00A0\u00A0\ Weight: ${element.weight}\u00A0\u00A0\u00A0\u00A0\ Ability: ${element.ability}</p>
+//                   <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
+//                   <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
+//                   <h3>Making Moves with Accuracy, Power and Priority</h3>
                  
-                  <p>${e.enemy[0].getMoves[0]}</p>
-                  <p>${e.enemy[0].getMoves[1]}</p>
-                  <p>${e.enemy[0].getMoves[2]}</p>
-                  <p>${e.enemy[0].getMoves[3]}</p>
-          </div>
+//                   <p>${e.enemy[0].getMoves[0]}</p>
+//                   <p>${e.enemy[0].getMoves[1]}</p>
+//                   <p>${e.enemy[0].getMoves[2]}</p>
+//                   <p>${e.enemy[0].getMoves[3]}</p>
+//           </div>
              
-          </div>
-          </div>
-          `
+//           </div>
+//           </div>
+//           `
 
-             div.appendChild(divCard);
-         });  
-}
+//              div.appendChild(divCard);
+//          });  
+// }
 function gettheNumber(){
     let getNum= document.getElementById("inputNumber").value;
     let num = parseInt(getNum);

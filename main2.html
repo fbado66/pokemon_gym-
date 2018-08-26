@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="main3.css">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="franklin.js" defer></script>
-  <script src="poke.js" defer></script>    <!--///// poke.js aka richard's version for js file //////////  -->
+  <script src="poke.js" defer></script>    <!--/////im using poke.js as richard's version for js file //////////  -->
   <script src="main.js" defer></script>
-  <a href="form.html" title="Subscribe"></a>
 
     <title>POKE-MONSTERS</title>
     <link rel="stylesheet" href="main3.css"/>
 </head>
 
 <body>
-
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-
 
   <div class="navbar-fixed">
     <nav class=" nav-extended">
-      <!-- <div class="container"> -->
+      <div class="container">
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo button-collapse" data-activates="mobile-demo" >POKEDEX</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">MENU</i></a>
@@ -34,11 +32,11 @@
             <li > <a href="#section-1">WELCOME</a> </li>
             <li > <a href="#section-2">TRAINERS</a> </li>
             <li > <a href="#section-3">OUR BEASTS</a> </li>
-            <li > <a href="#section-4">ABOUT US</a> </li>
-            <li > <a href="#section-5">DARE THE ODDS </a> </li>
+            <li > <a href="#section-4">DARE THE ODDS</a> </li>
+            <li > <a href="#section-5">ABOUT THE BEASTS</a> </li>
           </ul>
         </div>
-      <!-- </div> -->
+      </div>
     </nav>
   
     
@@ -46,14 +44,14 @@
     <li> <a href="#section-1">WELCOME</a> </li>
     <li> <a href="#section-2">TRAINERS</a> </li>
     <li> <a href="#section-3">OUR BEASTS</a> </li>
-    <li> <a href="#section-4">ABOUT US </a> </li>  
-    <li > <a href="#section-5">DARE THE ODDS</a> </li>
+    <li> <a href="#section-4">DARE THE ODDS</a> </li>  
+    <li > <a href="#section-5">ABOUT THE BEASTS</a> </li>
   </ul>
 </div> 
 
 
 <header>
-    <section id = "section-1">
+    <section id = "section-1"  >
          <img id ="top-image" src=battle1.jpg alt="logo"> 
        <span class="poke-monster" > POKE MONSTERS</span>
     </section>
@@ -70,9 +68,9 @@
               <img id="trainer4" src="imagestuff/godzilla.png" alt="" srcset=""> 
               <img  id="trainer4" src="trainer.jpg" alt="" srcset=""> 
               <br><br>
-                 <div><span id="rich"> RICHARDO-AI </span> 
+                 <div><span id="rich">I am RICHARDO-AI </span> 
                       <span id="franklin"> Hakuna_Matata-66 </span>
-                      <br>
+                      <br><br>
                 </div>
             </div>
  
@@ -184,9 +182,9 @@
     </div>     
  </section> 
 
+   
 <section id = "section-3" >
   <div class="mybackground">
-    <br>
     <div> <h1> OUR BEASTS</h1> </div>  
     
      <!-- container_text credits to: https://appendto.com/2016/09/how-to-make-circularcurved-text-with-javascript/ -->
@@ -205,7 +203,15 @@
     </div>
 </section>
 
+<section id = "section-4"  >
+      <div> <h1> DARE TO TAKE US ON!  <br> <br>  Choose your Monsters </h1>   </div>
 
+<<<<<<< HEAD
+<!-- 
+        /// Richard try to include somewhere around here, the search feature, and try to append each pokemom propmt
+        from the user on the space provide below. 
+        I like for it to be like Pablo Method, one pokemon per space if possible  ////// -->
+=======
 <section class = "about-us" id = "section-4" > 
     <div class="mybackground2">
    <div> <h1> ABOUT US </h1> </div> 
@@ -224,6 +230,121 @@
            <a class="aboutp teal " href="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Beasts' Origin</a>
         </p>    
 </section>
+
+>>>>>>> 4614ecdd783d6a21ebf895c3c5cf1407e1f300b4
+
+      <div class="col s12 m12 l7">
+          <div class="trainer_3">
+                  <ul class="collapsible">
+                           <li>
+                           <div> <img  id="trainer3" src="youastrainer.png" alt="" srcset=""> </div>
+
+                           <!-- I added this to take input from user-->
+                                  <!-- <label id="nameLable" for="inputNumber">Enter a number from 1 to 807</label>
+                                  <input id="inputNumber" class="red-text" type="text" maxlength="3" onfocus="this.value=''">
+                                  <button id="myBtn1" class="red-text">Add Enemy Pokémon</button> -->
+                           <!-- I added this to use a button search and display pokemon-->
+
+                           <div><span>Dare the odds</span></div>
+                             <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                              </i><span class ="Pokemom-text"> Pokemon 1 </span></div>
+                             <div class="collapsible-body booger1">
+                               <!-- i added this div -->
+                                <div id="divcd7" class="stats_display">   
+                                  <!-- information for the pokemon goes here  -->
+                                </div>
+                             </div>
+                          </li>
+
+                         <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                            </i> <span class ="Pokemom-text"> Pokemon 2 </span>
+                              </div>
+                            <div class="collapsible-body booger2">
+                              <!-- i added this div -->
+                                <div id="divcd8" class="stats_display"> 
+                                    <!-- information for the pokemon goes here  -->
+                                </div>
+                            </div>
+                          </li>
+                      
+                        <li>
+                            <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                            </i> <span class ="Pokemom-text"> Pokemon 3 </span>
+                            </div>
+                            <div class="collapsible-body booger3">
+                              <!-- i added this div -->
+                                <div id="divcd9" class="stats_display"> 
+                                   <!-- information for the pokemon goes here  -->
+                                </div>
+                            </div>
+                          </li>
+                      
+                        <li>
+                            <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                             </i> <span class ="Pokemom-text"> Pokemon 4 </span> </div>
+                            <div class="collapsible-body booger4"> 
+                              <!-- i added this div -->
+                                <div id="divcd10" class="stats_display"> 
+                               <!-- information for the pokemon goes here  -->
+
+                            </div>
+                          </li>
+        
+                          <li>
+                            <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                             </i> <span class ="Pokemom-text"> Pokemon 5 </span> </div>
+                            <div class="collapsible-body booger5">
+                              <!-- i added this div -->
+                                <div id="divcd11" class="stats_display"> 
+                                    <!-- information for the pokemon goes here  -->
+                                </div>
+                            </div>
+                          </li>
+                        
+                        <li>
+                            <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                            </i> <span class ="Pokemom-text"> Pokemon 6 </span> </div> 
+                            <div class="collapsible-body booger6">
+                              <!-- i added this div -->
+                                <div id="divcd12" class="stats_display"> 
+                                    <!-- information for the pokemon goes here  -->
+                                </div>
+                            </div>
+                            </li>
+                    </ul>
+         </div>
+  </div>  
+  </section>
+
+
+
+<!-- richard try to link here the font text you had, for the history about pokemon please  -->
+<!-- Franklin you have it below -->
+
+<section class = "about-us" id = "section-5" > 
+   <div> <h1> ABOUT BEASTS </h1> </div> 
+    <span class="teal-text namepoke1 center">
+       <h2>Beasts</h2>
+    </span>
+        <p class="teal-text namepoke1 center">These beasts are a Japanese game that is international. It was created by Satoshi Tajiri and Ken Sugimori. The original
+            concept was thought of in 1996 and Pokémon were originally called Pocket Monsters, Red and Green.
+        </p>
+        <p class="teal-text namepoke1 center">The franchise has spanned all boaders, and from cards to computers, hand helds, and now played on the phone. There
+            are many Pokémon to catch, about 800 in total with new monsters added with every update. The term "Gotta Catch
+            'Em All" is a an English slogan that was coined in the United States.
+        </p>
+        <p class="teal-text namepoke1 center"> By the way this is Pokémon text or what we like to call font!</p>
+        <p class="teal-text namepoke1 center">If you want an in depth Pokémon history please go to Wikipedia.</p>
+        <div class="row center ">
+            <h4>
+                <a class="aboutp " href="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Visit Wikipedia</a>
+            </h4>
+        </div>
+
+
+<<<<<<< HEAD
+=======
 
 <section id = "section-5"  >
   <br>
@@ -301,17 +422,24 @@
                   </ul>
        </div>
 </div>  
+
+>>>>>>> 4614ecdd783d6a21ebf895c3c5cf1407e1f300b4
 </section>
 
+</main>
 
        
-<footer>    
-       <a href="form.html"> SUBSCRIBE</a>   
-        <a href=""> HEAD QUARTER</a>           
-        <span id="copyrights"> COPY RIGHTS TO: SEI-18 THE METHOD CLASS - // #FRANKLIN'S #RICHARD'S    </span>          
 
+<footer>    
+    <span>
+        <a href=""> Blog</a>   
+        <a href=""> Head Quarter</a>   
+       <a href=""> Dare the odds </a>           
+    </span> 
 </footer>
-</main>
+
+
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
