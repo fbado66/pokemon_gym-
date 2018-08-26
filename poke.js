@@ -9,7 +9,7 @@
 
 
 
-// class Trainer {
+// class TrainerR {
 
 //     constructor(trainername = "Richardo-AI", height = 800, weight = 21100, gender = "male", hp = 399, type = "human") {
 //         this.trainername = trainername;
@@ -314,6 +314,62 @@ function axiosget(response, doAfterNetworkCall) {
             doAfterNetworkCall(monster)  
         }).catch((error) => {
             console.log(error)
+        })
+
+}
+function getThePokemans(response) {
+    axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
+        .then(function (result) {
+            console.log(result.data);
+            monster = new Pokemon(result.data);
+
+
+            // function getItem() {
+            //     let stuff = result.data.held_items[0];
+            //     if (stuff === undefined) {
+            //         //console.log(`Item: none`);
+            //         return `None`;
+            //     } else {
+            //         //console.log(`Item: ${result[i].data.held_items[0].item.name}`);
+            //         return `${result.data.held_items[0].item.name}`;
+            //     }
+            // }
+            //four moves only. Call new axios for moves and accruacy, power and priority
+            // function getMoves() {
+            //     makingMoves = result.data.moves;
+            //     let move = [];
+            //     let ctr = makingMoves.length;
+            //     for (let i = 0; i < 4; i++) {
+            //         let randMoves = Math.floor(Math.random() * ctr);
+            //         axios.get(makingMoves[randMoves].move.url)
+            //             .then(function (resBonus) {
+            //                 let bong = resBonus.data;
+            //                 //console.log(bong);
+            //                 // console.log(
+            //                 //     `Moves${i}: ${makingMoves[randMoves].move.name}
+            //                 //  Accruacy: ${bong.accuracy}
+            //                 //  Power: ${bong.power}
+            //                 //  Priority: ${bong.priority}`);
+
+            //                 move.push(`Moves${i}: \u00A0\u00A0${makingMoves[randMoves].move.name}\u00A0\u00A0
+            //                                     Accuracy: ${bong.accuracy}\u00A0\u00A0
+            //                                     Power: ${bong.power}\u00A0\u00A0
+            //                                     Priority: ${bong.priority}`);
+
+            //             }).catch(function (response) {
+            //                 console.error(response);
+            //             })
+            //     }
+            //     return move
+
+            // }
+
+
+           // e.addEnemy(monster);
+
+
+        }).catch(function (response) {
+            console.error(response);
         })
 
 }

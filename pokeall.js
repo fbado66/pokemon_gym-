@@ -11,7 +11,7 @@
 //charmander
 //"https://fizal.me/pokeapi/api/4.json"
 
-class Trainer {
+class RTrainer {
     constructor(name) {
         this.name = name;
         this.pokemonArray = [];
@@ -39,17 +39,7 @@ class Trainer {
         
 
     }
-    get(name) { //needs work
-        return this.pokemonArray.find((element) => {
-            return element.name == name;
-        })
-    }
-    gettrainerPokesData() { //needs work
-        return (this.name,
-            this.pokemonArray.forEach(element => {
-                console.log(element)
-            }))
-    }
+   
     getEnemyPokemonList(){
         let div = document.getElementById("myList2");
         let divCardEnemy = document.createElement("div");
@@ -126,10 +116,10 @@ class Trainer {
 
 //   let hakuna_matata = new Trainer("Hakuna_Matata");
 //   let Richardo_AI = new Trainer("Richardo_AI");
-let f = new Trainer("Hakuna_Matata");
-let r = new Trainer("Richardo_AI");
-let e = new Trainer("Time_for_a_beat_down");
-let gym = new Trainer("poke_monster_gym");
+//let f = new Trainer("Hakuna_Matata");
+let r = new RTrainer("Richardo_AI");
+let e = new RTrainer("Time_for_a_beat_down");
+// let gym = new RTrainer("poke_monster_gym");
 
 setTimeout(function () {
     r.add(gym.pokemonArray[0]);
@@ -298,13 +288,13 @@ function getThePokemans(response) {
 
 }
 
-document.getElementById("myBtn").addEventListener("click", displayPokeList);
+// document.getElementById("myBtn").addEventListener("click", displayPokeList);
 
-function displayPokeList() {
-    r.getAllPokemon();
-    f.getAllPokemon();
-    //r.pokemonArray[0];
-}
+// function displayPokeList() {
+//     r.getAllPokemon();
+//     f.getAllPokemon();
+//     //r.pokemonArray[0];
+// }
 /////////////////////////////////////////////////////////////////////////////////
 let count = 0;
 document.getElementById("myBtn1").addEventListener("click", displayAddEnemyPokemon)
