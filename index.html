@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
-    
-    
-    <title>Document</title>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="main3.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="franklin.js" defer></script>
+  <script src="poke.js" defer></script>    <!--///// poke.js aka richard's version for js file //////////  -->
+  <script src="main.js" defer></script>
+  <a href="form.html" title="Subscribe"></a>
+
+    <title>POKE-MONSTERS</title>
+    <link rel="stylesheet" href="main3.css"/>
 </head>
+
 <body>
+<<<<<<< HEAD
         <div class="center">
                 <!-- <a id="myBtn" href="#myList1">Pokémon display all</a> -->
                 <label id="nameLable" for="inputNumber">Enter a number from 1 to 807</label>
@@ -23,20 +33,302 @@
         </div>
         <div id="myList2">
                 
+=======
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+>>>>>>> b5c1503bae4e3187fcce35e65e76051f5c7dbb71
 
-                
+  <div class="navbar-fixed">
+    <nav class=" nav-extended">
+      <!-- <div class="container"> -->
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo button-collapse" data-activates="mobile-demo" >POKEDEX</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">MENU</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li > <a href="#section-1">WELCOME</a> </li>
+            <li > <a href="#section-2">TRAINERS</a> </li>
+            <li > <a href="#section-3">OUR BEASTS</a> </li>
+            <li > <a href="#section-4">ABOUT US</a> </li>
+            <li > <a href="#section-5">DARE THE ODDS </a> </li>
+          </ul>
         </div>
+      <!-- </div> -->
+    </nav>
+  
+    
+  <ul class="sidenav" id="mobile-demo">
+    <li> <a href="#section-1">WELCOME</a> </li>
+    <li> <a href="#section-2">TRAINERS</a> </li>
+    <li> <a href="#section-3">OUR BEASTS</a> </li>
+    <li> <a href="#section-4">ABOUT US </a> </li>  
+    <li > <a href="#section-5">DARE THE ODDS</a> </li>
+  </ul>
+</div> 
 
-        </div>
-        <div id="myList3">
-        <!-- <script src="poke.js"></script> -->
-        <!-- <script src="pokeData.js"></script> -->
-        <script src="pokeall.js"></script>
-        <script src="run.js"></script>
+
+<header>
+    <section id = "section-1">
+         <img id ="top-image" src=battle1.jpg alt="logo"> 
+       <span class="poke-monster" > POKE MONSTERS</span>
+    </section>
+</header>
+
+<main>
+<section id = "section-2" class ="logo">
+  <div> <h1> TRAINERS </h1> </div>
+    <div class="col s12 m12 l7">
+        <!-- //////////////////// Display of trainers ///////////////////////////// -->
+    <ul class="collapsible">
+         <li>
+            <div>
+              <img id="trainer4" src="imagestuff/godzilla.png" alt="" srcset=""> 
+              <img  id="trainer4" src="trainer.jpg" alt="" srcset=""> 
+              <br><br>
+                 <div><span id="rich"> RICHARDO-AI </span> 
+                      <span id="franklin"> Hakuna_Matata-66 </span>
+                      <br>
+                </div>
+            </div>
+ 
+<!-- ///////////////////Display for first pokebeast Charmander //////////////////////////////////// -->
+               <div class="collapsible-header #e53935 red darken-1">
+                  <i class="material-icons">
+                <img src="pokeball.png" alt="logo" />
+                 </i>
+                <span class ="Pokemom-text"> Charmander I choose you! </span></div>
+                  <div class="collapsible-body center">
+                   <div class="beast_display"> <img src="charmandergif.gif" alt="" srcset=""></div>
+                   <div id="divcd1" class="stats_display"> </div>
+                           
+                  <!-- stats-display for the first pokemon  -->
+                          
+               </div>
+          </li>
+
+ <!-- ///////////////////Display for second pokebeast Lapras//////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+               <i class="material-icons">
+              <img src="pokeball.png" alt="logo" />
+              </i>
+              <span class ="Pokemom-text"> Lapras I choose you! </span>
+            </div>
+              <div class="collapsible-body center ">
+                  <div class="beast_display"> <img id="lap" src="laprasgif.gif" alt="" srcset=""></div>
+                  <div id="divcd2" class="stats_display"></div>
+              </div>
+
+              <!-- stats-display for the second pokemon  -->          
+                                               
+          </li>
+
+<!-- ///////////////////Display for third pokebeast Mewtwo //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons">
+                 <img src="pokeball.png" alt="pokeball" srcset="">
+            </i> 
+            <span class ="Pokemom-text"> Mewtwo I choose you! </span>
+           </div>
+              <div class="collapsible-body">
+               <div class="beast_display_mewtwo"> <img src="mew-two.gif" alt="" srcset=""></div>
+                <div id="divcd3" class="stats_display">   </div>
+              </div>
+
+            <!-- stats-display for the third pokemon  -->  
+             
+          </li>
+
+<!-- ///////////////////Display for fourth pokebeast Arcanine //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons">
+              <img src="pokeball.png" alt="pokeball" srcset="">
+              </i>
+               <span class ="Pokemom-text"> Arcanine I choose you!</span>
+            </div>
+            <div class="collapsible-body">
+                <div class="beast_display"> <img id="arc" src="arcanine.gif" alt="" srcset=""></div>
+                <div id="divcd4" class="stats_display">   </div>
+
+            <!-- stats-display for the fourth pokemon  -->  
+
+            </div>
+          </li>
+
+<!-- ///////////////////Display for fifth pokebeast Magneton//////////////////////////////////// -->
+          
+         <li>
+           <div class="collapsible-header #e53935 red darken-1">
+             <i class="material-icons"> 
+               <img src="pokeball.png" alt="pokeball" srcset="">
+             </i>
+              <span class ="Pokemom-text">Magneton I choose you! </span>
+           </div>
+              <div class="collapsible-body">
+                  <div class="beast_display"> <img id="mag" src="magneton.gif" alt="" srcset=""></div>
+                  <div id="divcd5" class="stats_display">   </div>
+  
+              <!-- stats-display for the fifth pokemon  -->  
+  
+            </div>
+         </li>
+
+ <!-- ///////////////////Display for sixth pokebeast Duskull //////////////////////////////////// -->
+
+          <li>
+            <div class="collapsible-header #e53935 red darken-1">
+              <i class="material-icons"> 
+                <img src="pokeball.png" alt="pokeball" srcset=""> 
+            </i>
+                <span class ="Pokemom-text"> Duskull I choose you! </span>
+          </div>
+            <div class="collapsible-body">
+                <div class="beast_display"> <img id="dus" src="duskull.gif" alt="" srcset=""></div>
+                <div id="divcd6" class="stats_display">   </div>
+
+            <!-- stats-display for the sixth pokemon  -->  
+
+            </div>
+          </li>
+    </ul>
+    </div>     
+ </section> 
+
+<section id = "section-3" >
+  <div class="mybackground">
+    <br>
+    <div> <h1> OUR BEASTS</h1> </div>  
+    
+     <!-- container_text credits to: https://appendto.com/2016/09/how-to-make-circularcurved-text-with-javascript/ -->
+    <div class="container_text">
+        <div class="circTxt" id="test"></div>
+      </div>
+
+    <div class="carousel mycarousel">
+        <a class="carousel-item border solid red" href="#one!"><img src="arcanine3.png"></a>
+        <a class="carousel-item border solid red" href="#one!"><img src="magnetun3.jpg"></a>
+        <a class="carousel-item border solid red" href="#two!"><img src="mewtwo3.jpg"></a>
+        <a class="carousel-item border solid red" href="#three!"><img src="charmander3.jpg"></a>
+        <a class="carousel-item border solid red" href="#four!"><img src="lapras3.jpg"></a>
+        <a class="carousel-item border solid red" href="#five!"><img src="duskull3.jpg"></a>
+      </div>
+    </div>
+</section>
+
+
+<section class = "about-us" id = "section-4" > 
+    <div class="mybackground2">
+   <div> <h1> ABOUT US </h1> </div> 
+    <span class="teal-text namepoke1 center">
+       <h2> POKE MONSTERS' GYM </h2>
+    </span>
+    <p class="white-text namepoke1 center">Weclome Humans to Poke Monsters' Gym <br> Our names are RICHARDO-AI and Hakuna_Matata-66. We come from different cities, with different battle styles, but we have one thing in common. Powefull Beasts. 
+   <br> It all started in city of Queens When I Hakuna_Matata-66 battled RICHARDO-AI for his gosh badge. 
+  After a long battle, we saw many resembles with one another, and chose to create a gym where together, we will crush your dreams of becoming pokebeast masters</p>
+
+  <p class="white-text namepoke1 center">If and only If YOU ARE 100% POSITIVE to have what it takes to defy the odds, then subcribe, and we will take you on in a battle that will change your life as you know it <br> 
+    --YOU HAVE BEEN WARNED--
+  </p> <br>
+        <p class="white-text namepoke1 center">
+          To learn more about the beasts please dive in <br>
+           <a class="aboutp teal " href="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Beasts' Origin</a>
+        </p>    
+</section>
+
+<section id = "section-5"  >
+  <br>
+    <div> <h1> DARE TO TAKE US ON!  <br> <br> 
+      <div class="chooseYourMonster"> CHOOSE YOUR MONSTERS</div>  
+         </h1> 
+    </div>
+
+    <div class="col s12 m12 l7">
+        <div class="trainer_3">
+                <ul class="collapsible">
+                         <li>
+                         <div> <img  id="trainer3" src="youastrainer.png" alt="" srcset=""> </div>
+                         <div><span>Dare the odds</span></div>
+                           <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                            </i><span class ="Pokemom-text"> Pokemon 1 </span></div>
+                           <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                <!-- information for the pokemon goes here  -->
+
+                           </div>
+                        </li>
+
+                       <li>
+                        <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                          </i> <span class ="Pokemom-text"> Pokemon 2 </span>
+                            </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                  <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+                    
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                          </i> <span class ="Pokemom-text"> Pokemon 3 </span>
+                          </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                 <!-- information for the pokemon goes here  -->
+                                
+                          </div>
+                        </li>
+                    
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                           </i> <span class ="Pokemom-text"> Pokemon 4 </span> </div>
+                          <div class="collapsible-body"> 
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                             <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+      
+                        <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                           </i> <span class ="Pokemom-text"> Pokemon 5 </span> </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                  <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+                      
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                          </i> <span class ="Pokemom-text"> Pokemon 6 </span> </div> 
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                            <!-- information for the pokemon goes here  -->
+
+                          </div>
+                          </li>
+                  </ul>
+       </div>
+</div>  
+</section>
+
+
+       
+<footer>    
+       <a href="form.html"> SUBSCRIBE</a>   
+        <a href=""> HEAD QUARTER</a>           
+        <span id="copyrights"> COPY RIGHTS TO: SEI-18 THE METHOD CLASS - // #FRANKLIN'S #RICHARD'S    </span>          
+
+</footer>
+</main>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<!-- <script src="main.js"></script> -->
 </body>
 </html>
-
-
-
-
 

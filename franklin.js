@@ -216,29 +216,29 @@ axios.get(`https://fizal.me/pokeapi/api/${id}.json`)
 
 
 
-// function oneFunction() {
-//   var x = document.getElementById("panel");
-//   if (x.style.display === "block") {
-//       x.style.display = "none";
-//   } else {
-//       x.style.display = "block";
-//   }
-// }
+function oneFunction() {
+  var x = document.getElementById("panel");
+  if (x.style.display === "block") {
+      x.style.display = "none";
+  } else {
+      x.style.display = "block";
+  }
+}
 
-// function twoFunction() {
-//   var y = document.getElementById("panel_2");
-//   if (y.style.display === "block") {
-//       y.style.display = "none";
-//   } else {
-//       y.style.display = "block";
-//   }
-// }
+function twoFunction() {
+  var y = document.getElementById("panel_2");
+  if (y.style.display === "block") {
+      y.style.display = "none";
+  } else {
+      y.style.display = "block";
+  }
+}
 
-// function threeFunction() {
-//   var z = document.getElementById("panel_3");
-//   if (z.style.display === "block") {
-//       z.style.display = "none";
-//   } else {
-//       z.style.display = "block";
-//   }
-// }
+function threeFunction() {
+  var z = document.getElementById("panel_3");
+  if (z.style.display === "block") {
+      z.style.display = "none";
+  } else {
+      z.style.display = "block";
+  }
+}
