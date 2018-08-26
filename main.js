@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems);
 });
+
 
 // for dropdown menu for trainer 
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 /////////////  appending the axios information for pokemon 1 - charmander -  /////////////////////////
-  {
+{
     let divcard1 = document.getElementById("divcd1");
      function renderPokemon(pokebeast)
       {
@@ -44,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard1.appendChild(divInfo1);
         }
           axiosgetter(4, renderPokemon)
-  }
+}
 
 
   ///////////////  appending the axios information for pokemon 2 - lapras -   //////////////////////////////////
-  {
+{
     let divcard2 = document.getElementById("divcd2");
      function renderPokemon(pokebeast)
       {
@@ -73,14 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard2.appendChild(divInfo2);
         }
           axiosgetter(131, renderPokemon)
-  }
-
-
-
+}
 
 
    ///////////////  appending the axios information for pokemon 2 - Mewtwo -   //////////////////////////////////
-   {
+{
     let divcard3 = document.getElementById("divcd3");
      function renderPokemon(pokebeast)
       {
@@ -105,12 +101,11 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard3.appendChild(divInfo3);
         }
           axiosgetter(150, renderPokemon)
-  }
+}
 
 
 
-
-  {
+{
     let divcard4 = document.getElementById("divcd4");
      function richardpokemon(monster)
       {
@@ -135,11 +130,10 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard4.appendChild(divInfo4);
         }
           axiosget(59,richardpokemon)
-  }
+}
 
 
-
-  {
+{
     let divcard5 = document.getElementById("divcd5");
      function richardpokemon( monster)
       {
@@ -164,10 +158,10 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard5.appendChild(divInfo5);
         }
           axiosget(82, richardpokemon)
-  }
+}
 
 
-  {
+{
     let divcard6 = document.getElementById("divcd6");
      function richardpokemon( monster)
       {
@@ -192,33 +186,22 @@ document.addEventListener('DOMContentLoaded', function() {
           divcard6.appendChild(divInfo6);
         }
           axiosget(355, richardpokemon)
-  }
-
-
+}
 
 
 
   circularText(" DEFY THE ODDS                        ", 330, 0);
-
 function circularText(txt, radius, classIndex) {
   txt = txt.split(""),
     classIndex = document.getElementsByClassName("circTxt")[classIndex];
-
   var deg = 311 / txt.length,
     origin = 301;
-
   txt.forEach((ea) => {
     ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
     classIndex.innerHTML += ea;
     origin += deg;
   });
 }
-
-
-
-
-
-
 
 
 

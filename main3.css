@@ -4,6 +4,7 @@ body {
     background-color: none;
 }
 
+
 .navbar-fixed {
     z-index: 999;
 }
@@ -11,24 +12,30 @@ body {
 
 .nav-extended {
     background-color: black;
+    top: 0;
 }
-  
+ 
+
 .trainer_1{
     width: 500px; 
 } 
 
 
-   #trainer2{
+#trainer2{
     height: 230px; 
 }
 
-  .trainer_2{
+
+.trainer_2{
     width: 500px; 
 }
+
 
 #trainer{
     width: 50%;
 }
+
+
 .container {
     width: 100%;
     margin: auto;
@@ -37,9 +44,11 @@ body {
     color: white; 
 }
 
+
 header{
     background-color: black
 }
+
 
 #section-2{
     height: 1350px;
@@ -47,15 +56,21 @@ header{
 
 
 #section-3{
-    height: 800px;
+    height: 830px;
 }
 
 
-#section-4 {
-    height: 900px;
+#section-4{
+    height: 630px;
+}
+
+
+#section-5 {
+    height: 1000px;
     /* padding: 2px; */
     text-align: center;
 }
+
 
 section {
     height: 670px;
@@ -63,25 +78,29 @@ section {
     text-align: center;
 }
 
+
 header {
     height: 670px;
     font-family: sans-serif;
     text-align: right;
 }
 
+
 header a{
     font-size: 16px;    
 }
+   
 
 header ul{
     margin: 0;
-    padding: 2px;
+    /* padding: 2px; */
 }
 
+
 header li{
-    /* padding: 0 20px;  */
     display: inline;
 }
+
 
 header nav {
     float: right; 
@@ -89,10 +108,12 @@ header nav {
     margin-top: 0px; 
 }
 
+
 header a:hover{
     color: red; 
     font-weight: bold; 
 }
+
 
 #second-image {
     float: left;
@@ -106,18 +127,13 @@ header a:hover{
 
 #top-image {
     min-height: 400px;
+    top: 0;
     height: 100%;
     width: 100%;
-    /* margin-top: -2px; */
     z-index: -999;
-    float: center !important
-    
+    float: center !important    
 }
 
-/* #section-3{
-    background-image: image("battle1.jpg")
-
-} */
 
 .mybackground{
     background-image: url("arena.jpg"); 
@@ -125,38 +141,52 @@ header a:hover{
     top: 0;
     left: 0;
     background-color: #1F2D3D;
-    /* opacity: .7; */
-    height: 800px;
-    
+    height: 830px;   
 } 
 
-/* .mycarousel{
-    position: relative;
+.mybackground2{
+    background-image: url("duskullbackground.jpeg"); 
+     position: relative;
     top: 0;
-    left: 0; */
+    left: 0;
+    background-color: #1F2D3D;
+    height: 630px;    
+} 
 
-#section-2, #section-4 {
+
+#section-2, #section-5 {
     background-color: #131414; 
 }
+
 
 container2 {
     display: inline-block;
 }
+
+
+.nav-wrapper{
+    padding: 22px;
+}
+
 
 strong{
     color: black; 
     font-size: 18px; 
 }
 
+
 div h1 {
-    font-size: 35px; 
+    font-size: 22px; 
     color: white; 
     padding: 5px; 
     margin: 0;
     background:rgba(0, 0, 0, 0.5);
     text-align: center;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+
 }
-   
+
+
 strong {
  font-size: 70px; 
  color: black; 
@@ -164,28 +194,32 @@ strong {
     margin-top: 50px; 
 }
 
+
 #navbar {
     position:sticky;
-    top: 0;
+    top: 0px;
     width: 100%;
-    height: 100px;
+    height: 140px;
     font-size: 20px;
     background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
     text-align: center;
     z-index: 99;
     color: white; 
 }
-  
+
+
 #navbar a:hover {
     background-color: #ddd;
     color: black;
 }
-  
+ 
+
 #navbar a.active {
     background-color: #4CAF50;
     color: white;
 }
-    
+ 
+
 a{
     color: white; 
     margin-right: 0px; 
@@ -194,12 +228,14 @@ a{
   
 
 #trainer4{
-    width: 40%
+    width: 40%;
 }
+
 
 li{ 
     margin-right: 0;
 }
+
 
 h3 { 
     padding-left: 400px; 
@@ -217,15 +253,16 @@ h5 {
     color: white;
 }
 
+
 span{
     font-size: 20px; 
     color: white; 
 }
 
+
 image{
     border: solid, red;
 }
-
 
 
 footer {
@@ -238,21 +275,19 @@ footer {
 }
 
 
-
 .poke-monster{
     color:#8E1F0B;
     font-size: 72px; 
     margin-top: 40px;     
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-weight: 900;
-        padding: 50px;
-        text-shadow: 4px 3px goldenrod; 
-        /* background: rgba(0, 0, 0, 0.5); Black background with transparency */
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    padding: 50px;
+    text-shadow: 4px 3px goldenrod; 
 }
+
 
 .carousel-item{
     width: 500px !important;
@@ -260,70 +295,102 @@ footer {
     margin-top: -50px; 
 }
 
+
 .carousel{
     margin-top: 150px;
-    overflow: visible !important
-    
+    overflow: visible !important   
 }
+
 
 #franklin{
     padding-left: 60px; 
 }
 
+
 #rich{
     padding-right: 60px;
 }
+
+
 #trainer3{
     width: 110px;
 } 
-/* #second-image{
-    z-index: -99 !important;
-} */
+
 
 .stats_display{
     color: white; 
 }
+
+
 .beast_display{
     float: left;
 }
+
+
 .beast_display_mewtwo{
     float: left; 
    height: 250px;
    overflow: hidden;
-  
 }
+
 
 #lap{
     padding-right: 70px; 
 }
+
 
 #arc {
     overflow: hidden;
     height: 250px; 
 }
 
+
 #mag {
     overflow: hidden;
     height: 260px; 
 }
+
+
 #dus {
     overflow: hidden;
     height: 260px; 
 }
 
 
-    .container_text {
-        /*centers in the container*/
-        text-align: center;
-        font-size: 35px;
-        text-shadow: 4px 2px #ffeb3b;
-        font-weight: bold;
-      }
-      
-      div.circTxt {
-        /*allows for centering*/
-        display: inline-block;
-        /*adjust as needed*/
-        margin-bottom: 170px;
-        color: red
-      }
+.container_text {
+    /*centers in the container*/
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 4px 2px #ffeb3b;
+    font-weight: bold;
+}
+   
+
+div.circTxt {
+    /*allows for centering*/
+    display: inline-block;
+    /*adjust as needed*/
+    margin-bottom: 170px;
+    color: red
+}
+
+.chooseYourMonster{
+    color: white; 
+    text-shadow: 4px 2px red;
+    opacity: 0;
+    animation: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;      
+
+}
+@keyframes fadeIn {    
+    25% { opacity: 1; } 
+    70% { opacity: 0; }
+}
+
+
+#copyrights{
+    float: left; 
+    font-size: 9px;
+    margin-left: 10px; 
+}
