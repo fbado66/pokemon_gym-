@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems);
 });
+
 
 // for dropdown menu for trainer 
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,15 +23,16 @@ id[15,13,12,11,10,9];
 ////////////////////////////////////search///////////////////////////////////////////////////////
 
 
-
 /////////////  appending the axios information for pokemon 1 - charmander -  /////////////////////////
 {
-  let divcard1 = document.getElementById("divcd1");
 
-  function renderPokemon(pokebeast) {
-    let divInfo1 = document.createElement("div");
-    divInfo1.setAttribute("class", "center");
-    divInfo1.innerHTML = `
+    let divcard1 = document.getElementById("divcd1");
+     function renderPokemon(pokebeast)
+      {
+        let divInfo1 = document.createElement("div");
+          divInfo1.setAttribute("class", "center");
+          divInfo1.innerHTML =  `
+
               <div > 
                 <li> ${pokebeast.name} </li>
                 <li> Id: ${pokebeast.id} </li>
@@ -47,20 +48,24 @@ id[15,13,12,11,10,9];
                 <li>  Weight: ${pokebeast.weight} tons </li>   
               </div>
                                   `
+
     divcard1.appendChild(divInfo1);
   }
   axiosgetter(4, renderPokemon)
 }
 
 
-///////////////  appending the axios information for pokemon 2 - lapras -   //////////////////////////////////
-{
-  let divcard2 = document.getElementById("divcd2");
 
-  function renderPokemon(pokebeast) {
-    let divInfo2 = document.createElement("div");
-    divInfo2.setAttribute("class", "center");
-    divInfo2.innerHTML = `
+
+  ///////////////  appending the axios information for pokemon 2 - lapras -   //////////////////////////////////
+{
+    let divcard2 = document.getElementById("divcd2");
+     function renderPokemon(pokebeast)
+      {
+        let divInfo2 = document.createElement("div");
+          divInfo2.setAttribute("class", "center");
+          divInfo2.innerHTML =  `
+
               <div > 
                 <li> ${pokebeast.name} </li>
                 <li> Id: ${pokebeast.id} </li>
@@ -76,6 +81,7 @@ id[15,13,12,11,10,9];
                 <li>  Weight: ${pokebeast.weight} tons </li>   
               </div>
                                   `
+
     divcard2.appendChild(divInfo2);
   }
   axiosgetter(131, renderPokemon)
@@ -85,14 +91,24 @@ id[15,13,12,11,10,9];
 
 
 
+          divcard2.appendChild(divInfo2);
+        }
+          axiosgetter(131, renderPokemon)
+}
+
+
 ///////////////  appending the axios information for pokemon 2 - Mewtwo -   //////////////////////////////////
 {
-  let divcard3 = document.getElementById("divcd3");
 
-  function renderPokemon(pokebeast) {
-    let divInfo3 = document.createElement("div");
-    divInfo3.setAttribute("class", "center");
-    divInfo3.innerHTML = `
+   ///////////////  appending the axios information for pokemon 2 - Mewtwo -   //////////////////////////////////
+{
+    let divcard3 = document.getElementById("divcd3");
+     function renderPokemon(pokebeast)
+      {
+        let divInfo3 = document.createElement("div");
+          divInfo3.setAttribute("class", "center");
+          divInfo3.innerHTML =  `
+
               <div > 
                 <li> ${pokebeast.name} </li>
                 <li> Id: ${pokebeast.id} </li>
@@ -108,6 +124,7 @@ id[15,13,12,11,10,9];
                 <li>  Weight: ${pokebeast.weight} tons </li>   
               </div>
                                   `
+
     divcard3.appendChild(divInfo3);
   }
   axiosgetter(150, renderPokemon)
@@ -115,14 +132,18 @@ id[15,13,12,11,10,9];
 
 
 
+     
+
+
 
 {
-  let divcard4 = document.getElementById("divcd4");
+    let divcard4 = document.getElementById("divcd4");
+     function richardpokemon(monster)
+      {
+        let divInfo4 = document.createElement("div");
+          divInfo4.setAttribute("class", "center");
+          divInfo4.innerHTML =  `
 
-  function richardpokemon(monster) {
-    let divInfo4 = document.createElement("div");
-    divInfo4.setAttribute("class", "center");
-    divInfo4.innerHTML = `
               <div > 
               <li> ${monster.name} </li>
               <li> Id: ${monster.id} </li>
@@ -138,6 +159,7 @@ id[15,13,12,11,10,9];
               <li>  Weight: ${monster.weight} tons </li>   
               </div>
                                   `
+
     divcard4.appendChild(divInfo4);
   }
   axiosget(59, richardpokemon)
@@ -145,13 +167,17 @@ id[15,13,12,11,10,9];
 
 
 
-{
-  let divcard5 = document.getElementById("divcd5");
 
-  function richardpokemon(monster) {
-    let divInfo5 = document.createElement("div");
-    divInfo5.setAttribute("class", "center");
-    divInfo5.innerHTML = `
+
+
+{
+    let divcard5 = document.getElementById("divcd5");
+     function richardpokemon( monster)
+      {
+        let divInfo5 = document.createElement("div");
+          divInfo5.setAttribute("class", "center");
+          divInfo5.innerHTML =  `
+
               <div > 
                  <li> ${monster.name} </li>
                  <li> Id: ${monster.id} </li>
@@ -167,19 +193,23 @@ id[15,13,12,11,10,9];
                  <li>  Weight: ${monster.weight} tons </li>   
               </div>
                                   `
+
     divcard5.appendChild(divInfo5);
   }
   axiosget(82, richardpokemon)
-}
+=======
+          
 
 
 {
-  let divcard6 = document.getElementById("divcd6");
 
-  function richardpokemon(monster) {
-    let divInfo6 = document.createElement("div");
-    divInfo6.setAttribute("class", "center");
-    divInfo6.innerHTML = `
+    let divcard6 = document.getElementById("divcd6");
+     function richardpokemon( monster)
+      {
+        let divInfo6 = document.createElement("div");
+          divInfo6.setAttribute("class", "center");
+          divInfo6.innerHTML =  `
+
               <div > 
                  <li> ${monster.name} </li>
                  <li> Id: ${monster.id} </li>
@@ -195,6 +225,7 @@ id[15,13,12,11,10,9];
                  <li>  Weight: ${monster.weight} tons </li>   
               </div>
                                   `
+
     divcard6.appendChild(divInfo6);
   }
   axiosget(355, richardpokemon)
@@ -411,25 +442,27 @@ id[15,13,12,11,10,9];
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 circularText(" DEFY THE ODDS                        ", 330, 0);
 
+
+          divcard6.appendChild(divInfo6);
+        }
+          axiosget(355, richardpokemon)
+}
+
+
+
+  circularText(" DEFY THE ODDS                        ", 330, 0);
+
 function circularText(txt, radius, classIndex) {
   txt = txt.split(""),
     classIndex = document.getElementsByClassName("circTxt")[classIndex];
-
   var deg = 311 / txt.length,
     origin = 301;
-
   txt.forEach((ea) => {
     ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
     classIndex.innerHTML += ea;
     origin += deg;
   });
 }
-
-
-
-
-
-
 
 
 

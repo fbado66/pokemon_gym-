@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="main3.css">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="franklin.js" defer></script>
-  <script src="poke.js" defer></script>    <!--/////im using poke.js as richard's version for js file //////////  -->
+  <script src="poke.js" defer></script>    <!--///// poke.js aka richard's version for js file //////////  -->
   <script src="main.js" defer></script>
+  <a href="form.html" title="Subscribe"></a>
 
     <title>POKE-MONSTERS</title>
     <link rel="stylesheet" href="main3.css"/>
@@ -24,7 +24,7 @@
 
   <div class="navbar-fixed">
     <nav class=" nav-extended">
-      <div class="container">
+      <!-- <div class="container"> -->
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo button-collapse" data-activates="mobile-demo" >POKEDEX</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">MENU</i></a>
@@ -32,11 +32,11 @@
             <li > <a href="#section-1">WELCOME</a> </li>
             <li > <a href="#section-2">TRAINERS</a> </li>
             <li > <a href="#section-3">OUR BEASTS</a> </li>
-            <li > <a href="#section-4">DARE THE ODDS</a> </li>
-            <li > <a href="#section-5">ABOUT THE BEASTS</a> </li>
+            <li > <a href="#section-4">ABOUT US</a> </li>
+            <li > <a href="#section-5">DARE THE ODDS </a> </li>
           </ul>
         </div>
-      </div>
+      <!-- </div> -->
     </nav>
   
     
@@ -44,14 +44,14 @@
     <li> <a href="#section-1">WELCOME</a> </li>
     <li> <a href="#section-2">TRAINERS</a> </li>
     <li> <a href="#section-3">OUR BEASTS</a> </li>
-    <li> <a href="#section-4">DARE THE ODDS</a> </li>  
-    <li > <a href="#section-5">ABOUT THE BEASTS</a> </li>
+    <li> <a href="#section-4">ABOUT US </a> </li>  
+    <li > <a href="#section-5">DARE THE ODDS</a> </li>
   </ul>
 </div> 
 
 
 <header>
-    <section id = "section-1"  >
+    <section id = "section-1">
          <img id ="top-image" src=battle1.jpg alt="logo"> 
        <span class="poke-monster" > POKE MONSTERS</span>
     </section>
@@ -68,9 +68,9 @@
               <img id="trainer4" src="imagestuff/godzilla.png" alt="" srcset=""> 
               <img  id="trainer4" src="trainer.jpg" alt="" srcset=""> 
               <br><br>
-                 <div><span id="rich">I am RICHARDO-AI </span> 
+                 <div><span id="rich"> RICHARDO-AI </span> 
                       <span id="franklin"> Hakuna_Matata-66 </span>
-                      <br><br>
+                      <br>
                 </div>
             </div>
  
@@ -182,9 +182,9 @@
     </div>     
  </section> 
 
-   
 <section id = "section-3" >
   <div class="mybackground">
+    <br>
     <div> <h1> OUR BEASTS</h1> </div>  
     
      <!-- container_text credits to: https://appendto.com/2016/09/how-to-make-circularcurved-text-with-javascript/ -->
@@ -203,13 +203,26 @@
     </div>
 </section>
 
-<section id = "section-4"  >
-      <div> <h1> DARE TO TAKE US ON!  <br> <br>  Choose your Monsters </h1>   </div>
 
-<!-- 
-        /// Richard try to include somewhere around here, the search feature, and try to append each pokemom propmt
-        from the user on the space provide below. 
-        I like for it to be like Pablo Method, one pokemon per space if possible  ////// -->
+<section class = "about-us" id = "section-4" > 
+    <div class="mybackground2">
+   <div> <h1> ABOUT US </h1> </div> 
+    <span class="teal-text namepoke1 center">
+       <h2> POKE MONSTERS' GYM </h2>
+    </span>
+    <p class="white-text namepoke1 center">Weclome Humans to Poke Monsters' Gym <br> Our names are RICHARDO-AI and Hakuna_Matata-66. We come from different cities, with different battle styles, but we have one thing in common. Powefull Beasts. 
+   <br> It all started in city of Queens When I Hakuna_Matata-66 battled RICHARDO-AI for his gosh badge. 
+  After a long battle, we saw many resembles with one another, and chose to create a gym where together, we will crush your dreams of becoming pokebeast masters</p>
+
+  <p class="white-text namepoke1 center">If and only If YOU ARE 100% POSITIVE to have what it takes to defy the odds, then subcribe, and we will take you on in a battle that will change your life as you know it <br> 
+    --YOU HAVE BEEN WARNED--
+  </p> <br>
+        <p class="white-text namepoke1 center">
+          To learn more about the beasts please dive in <br>
+           <a class="aboutp teal " href="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Beasts' Origin</a>
+        </p>    
+</section>
+
 
       <div class="col s12 m12 l7">
           <div class="trainer_3">
@@ -321,22 +334,95 @@
         </div>
 
 
+
+<section id = "section-5"  >
+  <br>
+    <div> <h1> DARE TO TAKE US ON!  <br> <br> 
+      <div class="chooseYourMonster"> CHOOSE YOUR MONSTERS</div>  
+         </h1> 
+    </div>
+
+    <div class="col s12 m12 l7">
+        <div class="trainer_3">
+                <ul class="collapsible">
+                         <li>
+                         <div> <img  id="trainer3" src="youastrainer.png" alt="" srcset=""> </div>
+                         <div><span>Dare the odds</span></div>
+                           <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                            </i><span class ="Pokemom-text"> Pokemon 1 </span></div>
+                           <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                <!-- information for the pokemon goes here  -->
+
+                           </div>
+                        </li>
+
+                       <li>
+                        <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                          </i> <span class ="Pokemom-text"> Pokemon 2 </span>
+                            </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                  <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+                    
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset=""> 
+                          </i> <span class ="Pokemom-text"> Pokemon 3 </span>
+                          </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                 <!-- information for the pokemon goes here  -->
+                                
+                          </div>
+                        </li>
+                    
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                           </i> <span class ="Pokemom-text"> Pokemon 4 </span> </div>
+                          <div class="collapsible-body"> 
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                             <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+      
+                        <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                           </i> <span class ="Pokemom-text"> Pokemon 5 </span> </div>
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                                  <!-- information for the pokemon goes here  -->
+
+                          </div>
+                        </li>
+                      
+                      <li>
+                          <div class="collapsible-header #e53935 red darken-1"><i class="material-icons"> <img src="pokeball.png" alt="pokeball" srcset="">
+                          </i> <span class ="Pokemom-text"> Pokemon 6 </span> </div> 
+                          <div class="collapsible-body">
+                              <span class="red"><a href="form.html"> Subcribe First! </a></span> <br> <span> In order to choose your pokemon</span>  
+                            <!-- information for the pokemon goes here  -->
+
+                          </div>
+                          </li>
+                  </ul>
+       </div>
+</div>  
+
 </section>
 
-</main>
 
        
-
 <footer>    
-    <span>
-        <a href=""> Blog</a>   
-        <a href=""> Head Quarter</a>   
-       <a href=""> Dare the odds </a>           
-    </span> 
+       <a href="form.html"> SUBSCRIBE</a>   
+        <a href=""> HEAD QUARTER</a>           
+        <span id="copyrights"> COPY RIGHTS TO: SEI-18 THE METHOD CLASS - // #FRANKLIN'S #RICHARD'S    </span>          
+
 </footer>
-
-
-
+</main>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
