@@ -156,7 +156,7 @@ function axiosget(response, doAfterNetworkCall) {
 }
 
 //function axiosgetEnemy(response, doAfterNetworkCall)
-    function axiosgetEnemy(response, doAfterNetworkCall) {
+    function axiosgetEnemy(response, doitlaterCall) {
 
      {
         axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
@@ -168,7 +168,7 @@ function axiosget(response, doAfterNetworkCall) {
                     bing)
                 
                 
-                doAfterNetworkCall(monster)  
+                    doitlaterCall(monster)  
             }).catch((error) => {
                 console.log(error)
             })

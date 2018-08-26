@@ -16,30 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Collapsible.init(elems);
 });
 
- 
-////////////////////////////////////search///////////////////////////////////////////////////////
-// let count = 0;
-// let enemyArray = [];
-// document.getElementById("myBtn1").addEventListener("click", displayAddEnemyPokemon)
-// function displayAddEnemyPokemon() {
+let id = [];
+id[15,13,12,11,10,9];
 
-//   let id = gettheNumber();
- 
-
-//   if (count < 6) {
-//     enemyArray.push(id);
-//     count++;
-    
-//   } else {
-//     alert("That is enough, 6 enemy pokemon is enough!")
-//   }
-
-// }
-// function gettheNumber() {
-//   let getNum = document.getElementById("inputNumber").value;
-//   let num = parseInt(getNum);
-//   return num;
-// }
 
 ////////////////////////////////////search///////////////////////////////////////////////////////
 
@@ -308,7 +287,8 @@ document.addEventListener('DOMContentLoaded', function () {
   //getThePokemans(enemyArray[2])
   axiosget(666, richardpokemon)
 
-} {
+} 
+{
   let divcard10 = document.getElementById("divcd10");
 
   function richardpokemon(monster) {
@@ -335,7 +315,8 @@ document.addEventListener('DOMContentLoaded', function () {
   //getThePokemans(enemyArray[3])
   axiosget(222, richardpokemon)
 
-} {
+}
+ {
   let divcard11 = document.getElementById("divcd11");
 
   function richardpokemon(monster) {
@@ -388,10 +369,32 @@ document.addEventListener('DOMContentLoaded', function () {
     divcard12.appendChild(divInfo12);
   }
   //getThePokemans(enemyArray[5])
-  axiosget(333, richardpokemon)
+  axiosgetEnemy(347, richardpokemon)
 }
 
+////////////////////////////////////search///////////////////////////////////////////////////////
+// let count = 0;
+// let enemyArray = [];
+// document.getElementById("myBtn1").addEventListener("click", displayAddEnemyPokemon)
+// function displayAddEnemyPokemon() {
 
+//   let id = gettheNumber();
+ 
+
+//   if (count < 6) {
+//     enemyArray.push(id);
+//     count++;
+    
+//   } else {
+//     alert("That is enough, 6 enemy pokemon is enough!")
+//   }
+
+// }
+// function gettheNumber() {
+//   let getNum = document.getElementById("inputNumber").value;
+//   let num = parseInt(getNum);
+//   return num;
+// }
 
 
 
