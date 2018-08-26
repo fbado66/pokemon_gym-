@@ -50,13 +50,48 @@ class Trainer {
                 console.log(element)
             }))
     }
+    getEnemyPokemonList(){
+        let div = document.getElementById("myList2");
+        let divCardEnemy = document.createElement("div");
+        divCardEnemy.setAttribute("id", "attriblist2");
+        this.enemy.forEach(element => { //use element.whatever to get data
+       
+
+            divCardEnemy.innerHTML = `
+                <h2 class="center teal">Enemy Pokemon List</h2>
+                <h3 class="header myListName">${element.name}</h3>
+                <div class="card horizontal">
+                <div class="card-image">
+                <img class="pokeList" src="${element.image}" alt="Arcanine" width="200">
+                </div>
+                 <div class="card-stacked">
+                <div class="card-content myListContent">
+                 <p>ID: ${element.id}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${element.item }\u00A0\u00A0\u00A0\u00A0\  Type: ${element.type}</p>
+                 <p>Height: ${element.height  }\u00A0\u00A0\u00A0\u00A0\ Weight: ${element.weight}\u00A0\u00A0\u00A0\u00A0\ Ability: ${element.ability}</p>
+                 <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
+                 <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
+                 <h3>Making Moves with Accuracy, Power and Priority</h3>
+                 
+                 <p>${this.enemy[0].getMoves[0]}</p>
+                 <p>${this.enemy[0].getMoves[1]}</p>
+                 <p>${this.enemy[0].getMoves[2]}</p>
+                 <p>${this.enemy[0].getMoves[3]}</p>
+                </div>
+             
+                </div>
+                </div>
+                `
+
+            div.appendChild(divCardEnemy);
+        });
+    }
     //example of putting all the data on the screen////
     getAllPokemon() {
         let div = document.getElementById("myList1");
         let divCard = document.createElement("div");
         divCard.setAttribute("id", "attriblist");
         this.pokemonArray.forEach(element => { //use element.whatever to get data
-            let divCard = document.createElement("div");
+            
 
             divCard.innerHTML = `
          <h2 class="center teal">${this.name}</h2>
@@ -271,18 +306,62 @@ function displayPokeList() {
     //r.pokemonArray[0];
 }
 /////////////////////////////////////////////////////////////////////////////////
-document.getElementById("myBtn1").addEventListener("click", displayOnePokemon);
-function displayOnePokemon() {
+let count = 0;
+document.getElementById("myBtn1").addEventListener("click", displayAddEnemyPokemon)
+function displayAddEnemyPokemon() {
+    
     let id = gettheNumber();
-    if(true){
-        r.getIndividual(id) || f.getIndividual(id)
-
-    }
+    if (count  < 6){
+        getThePokemans(id)//the search adds the monster to the enemy's array 
+        count ++;
+    }else{alert( "That is enough, 6 enemy pokemon is enough!")}
+       
 }
 
+document.getElementById("myBtn2").addEventListener("click", displayAllEnemyPokemon)
+function displayAllEnemyPokemon() { 
+    
+    e.enemy.forEach(function(element) {
+        console.log(element);
+      });
+    //e.getEnemyPokemonList()
+    //   let div = document.getElementById("myList1");
+    //     let divCard = document.createElement("div");
+    //     divCard.setAttribute("id", "attriblist");
+    //     e.enemy.forEach(element => { //use element.whatever to get data
+            
+
+    //         divCard.innerHTML = `
+    //      <h2 class="center teal">Enemy Pokemon List</h2>
+    //      <h3 class="header myListName">${element.name}</h3>
+    //      <div class="card horizontal">
+    //      <div class="card-image">
+    //           <img class="pokeList" src="${element.image}" alt="Arcanine" width="200">
+    //      </div>
+    //      <div class="card-stacked">
+    //          <div class="card-content myListContent">
+    //              <p>ID: ${element.id}\u00A0\u00A0\u00A0\u00A0\ Held Item: ${element.item }\u00A0\u00A0\u00A0\u00A0\  Type: ${element.type}</p>
+    //              <p>Height: ${element.height  }\u00A0\u00A0\u00A0\u00A0\ Weight: ${element.weight}\u00A0\u00A0\u00A0\u00A0\ Ability: ${element.ability}</p>
+    //              <p>Attack: ${element.attack  }\u00A0\u00A0\u00A0\u00A0\ Defense: ${element.defense}\u00A0\u00A0\u00A0\u00A0\ Speed: ${element.speed} </p>
+    //              <p>Special Attack: ${element.specialAttack  }\u00A0\u00A0\u00A0\u00A0\ Special Defense: ${element.specialDefense}</p>
+    //              <h3>Making Moves with Accuracy, Power and Priority</h3>
+                 
+    //              <p>${e.enemy[0].getMoves[0]}</p>
+    //              <p>${e.enemy[0].getMoves[1]}</p>
+    //              <p>${e.enemy[0].getMoves[2]}</p>
+    //              <p>${e.enemy[0].getMoves[3]}</p>
+    //      </div>
+             
+    //      </div>
+    //      </div>
+    //      `
+
+    //         div.appendChild(divCard);
+    //     });  
+}
 function gettheNumber(){
-    let getHp= document.getElementById("inputNumber").value;
-    let num = parseInt(getHp);
+    let getNum= document.getElementById("inputNumber").value;
+    let num = parseInt(getNum);
     return num;
 }
 
