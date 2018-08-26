@@ -198,6 +198,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+  circularText(" DEFY THE ODDS                        ", 330, 0);
+
+function circularText(txt, radius, classIndex) {
+  txt = txt.split(""),
+    classIndex = document.getElementsByClassName("circTxt")[classIndex];
+
+  var deg = 311 / txt.length,
+    origin = 301;
+
+  txt.forEach((ea) => {
+    ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${ea}</p>`;
+    classIndex.innerHTML += ea;
+    origin += deg;
+  });
+}
+
+
 
 
 

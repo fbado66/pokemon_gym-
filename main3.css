@@ -1,24 +1,26 @@
 body {
     margin: 0;
-    /* font-family: Roboto, 'Helvetica Neue', sans-serif; */
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
     background-color: none;
 }
 
-
 .navbar-fixed {
-    z-index: 999; }
-  
-  .nav-extended {
+    z-index: 999;
+}
+ 
+
+.nav-extended {
     background-color: black;
- }
+}
   
-  .trainer_1{
-      width: 500px; 
-  } 
+.trainer_1{
+    width: 500px; 
+} 
+
 
    #trainer2{
-      height: 230px; 
-  }
+    height: 230px; 
+}
 
   .trainer_2{
     width: 500px; 
@@ -41,6 +43,11 @@ header{
 
 #section-2{
     height: 1350px;
+}
+
+
+#section-3{
+    height: 800px;
 }
 
 
@@ -119,7 +126,7 @@ header a:hover{
     left: 0;
     background-color: #1F2D3D;
     /* opacity: .7; */
-    height: 670px;
+    height: 800px;
     
 } 
 
@@ -242,6 +249,7 @@ footer {
         transform: translate(-50%, -50%);
         font-weight: 900;
         padding: 50px;
+        text-shadow: 4px 3px goldenrod; 
         /* background: rgba(0, 0, 0, 0.5); Black background with transparency */
 
 }
@@ -302,3 +310,20 @@ footer {
     overflow: hidden;
     height: 260px; 
 }
+
+
+    .container_text {
+        /*centers in the container*/
+        text-align: center;
+        font-size: 35px;
+        text-shadow: 4px 2px #ffeb3b;
+        font-weight: bold;
+      }
+      
+      div.circTxt {
+        /*allows for centering*/
+        display: inline-block;
+        /*adjust as needed*/
+        margin-bottom: 170px;
+        color: red
+      }
