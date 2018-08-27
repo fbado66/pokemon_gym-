@@ -139,7 +139,7 @@ let obj = {};
 function axiosget(response, doAfterNetworkCall) {
 
 // function getThePokemans(trainername, response) {
-    axios.get(`http://fizal.me/pokeapi/api/${response}.json`)
+    axios.get(`https://fizal.me/pokeapi/api/${response}.json`)
         .then(function (res) {
             let bing = res.data;
             // console.log(bing);
